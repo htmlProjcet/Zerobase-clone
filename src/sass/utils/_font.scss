@@ -1,0 +1,49 @@
+//B: bold style. 안 붙어있는 건 normal
+
+@mixin font-32-B {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    line-height: 36px;
+}
+
+@mixin font-24-B {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    line-height: 36px;
+}
+
+@mixin font-18-B {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    line-height: 27px;
+}
+
+@mixin font-16-B {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    line-height: 24px;
+}
+
+@mixin font-14px {
+    font-size: 14px;
+    letter-spacing: -0.3px;
+    line-height: 21px;
+}
+
+@mixin font-14px-B {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    line-height: 21px;
+}
+
+@mixin font-12px-B {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    line-height: 18px;
+}
