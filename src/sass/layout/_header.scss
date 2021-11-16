@@ -1,8 +1,15 @@
 @use './../utils' as *;
 
 .header {
+  .login,
+  .signup {
+    display: none;
+  }
   background: $header-bg;
-  @include flexbox;
+  position: sticky;
+  top: 0;
+  padding-bottom: rem(20px);
+  padding-top: rem(20px);
   @include font-16px-B;
 
   &-nav-list {
@@ -15,8 +22,15 @@
   }
 
   @include desktop {
-    &-members {
+    @include flexbox;
+    .login,
+    .signup {
       order: 1;
+      display: block;
+      @include paddingX(15);
+    }
+    img {
+      transform: translateY(rem(5px));
     }
     .button--burger {
       display: none;
@@ -24,18 +38,27 @@
     .sub-menu {
       display: none;
     }
+    .nav-menu {
+      justify-content: flex-end;
+      display: flex;
+      flex: 1;
+    }
   }
 
   @include mobile {
+    @include flexbox($justify: center);
     &-members,
     &-nav {
       display: none;
     }
+
+    .button--burger {
+      background: orange;
+    }
   }
 
   @include tablet {
-    background: blue;
-    @include font-12px-B;
+    @include flexbox($justify: center);
     &-members,
     &-nav {
       display: none;

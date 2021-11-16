@@ -4,8 +4,8 @@
 .button {
   appearance: none;
   pointer-events: none;
+  background: inherit;
   border: 0;
-  background-color: inherit;
   padding: rem(8px) rem(16px);
   border-radius: rem(4px);
 
