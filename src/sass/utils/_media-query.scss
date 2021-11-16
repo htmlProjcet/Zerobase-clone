@@ -76,7 +76,7 @@ $desktop: 1200px;
 }
 
 @mixin desktop {
-  @media (max-width: #{$desktop}) {
+  @media (min-width: #{$tablet + 1}) {
     @content;
   }
 }
