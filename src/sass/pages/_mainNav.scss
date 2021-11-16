@@ -1,5 +1,13 @@
 @use './../utils' as *;
-
+.main-nav {
+  padding: rem(24px) 0;
+  @include tablet {
+    padding: rem(48px) 0;
+  }
+  @include desktop {
+    padding: rem(48px) 0;
+  }
+}
 .main-list {
   display: flex;
   flex-direction: row;
@@ -8,12 +16,29 @@
 }
 .main__item {
   list-style-type: none;
-  img {
-    width: 64px;
-    height: 64px;
+  span {
+    width: rem(64px);
+    height: rem(64px);
+    overflow: hidden;
+    border-radius: 30%;
+
     @include desktop {
-      width: 96px;
-      height: 96px;
+      width: rem(96px);
+      height: rem(96px);
+    }
+  }
+  img {
+    width: rem(64px);
+    height: rem(64px);
+    border-radius: 30%;
+    transition: all 0.2s linear;
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    @include desktop {
+      width: rem(96px);
+      height: rem(96px);
     }
   }
   figure {
@@ -27,6 +52,7 @@
   }
 }
 figcaption {
+  margin-top: rem(16px);
   text-align: center;
   color: $black;
   @include font-12px-B;
