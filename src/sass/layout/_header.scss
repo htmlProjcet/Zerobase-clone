@@ -5,9 +5,10 @@
   .signup {
     display: none;
   }
-  background: $header-bg;
+  @include flexbox($justify: center);
   position: sticky;
   top: 0;
+  background: $header-bg;
   padding-bottom: rem(20px);
   padding-top: rem(20px);
   @include font-16px-B;
@@ -19,49 +20,88 @@
   &-nav__button {
     text-transform: uppercase;
     @include font-16px-B;
+
+    img {
+      transition: all 200ms ease-in-out;
+    }
+
+    &.is-active {
+      img {
+        transform: rotate(-180deg);
+        transition-property: all;
+        transition-duration: 0.2s;
+      }
+    }
+  }
+
+  .button--burger {
+    position: absolute;
+    top: rem(20px);
+    right: rem(5px);
+  }
+
+  &-members,
+  &-nav {
+    display: none;
   }
 
   @include desktop {
+    &-nav img {
+      transform: translateY(rem(2px));
+    }
     @include flexbox;
+    .logo img {
+      transform: translateY(rem(5px));
+    }
     .login,
     .signup {
       order: 1;
       display: block;
       @include paddingX(15);
     }
-    img {
+    .login img,
+    .signup img {
       transform: translateY(rem(5px));
     }
-    .button--burger {
-      display: none;
-    }
+
     .sub-menu {
       display: none;
+      @include paddingX(15px);
+      background: $white;
+      box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
+      width: rem(230px);
+      transform: translateX(-40px);
+      border-radius: 10px;
+      position: absolute;
+      @include font-14px-B;
+
+      li {
+        @include paddingY(10px);
+        border-bottom: 1px solid $white-gray;
+      }
+
+      li:last-child {
+        border-bottom: 0;
+      }
     }
+
+    .sub-menu.is-active {
+      display: block;
+    }
+
     .nav-menu {
-      justify-content: flex-end;
       display: flex;
       flex: 1;
+      justify-content: flex-end;
+      white-space: nowrap;
     }
-  }
+    &-nav__item {
+      cursor: pointer;
+    }
 
-  @include mobile {
-    @include flexbox($justify: center);
     &-members,
     &-nav {
-      display: none;
-    }
-
-    .button--burger {
-      background: orange;
-    }
-  }
-
-  @include tablet {
-    @include flexbox($justify: center);
-    &-members,
-    &-nav {
-      display: none;
+      display: block;
     }
   }
 }
