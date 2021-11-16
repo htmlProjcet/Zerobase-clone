@@ -1,23 +1,5 @@
 @use './../utils' as *;
 
-body,
-h2,
-h3,
-dl,
-dd,
-dt,
-ul,
-li,
-a {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  font-style: normal;
-  text-decoration: none;
-  color: inherit;
-
-}
-
 .footer {
   overflow: hidden;
   background-color: $footer-bg;
@@ -67,7 +49,6 @@ a {
     text-indent: rem(4px);
   }
 
-
   .footer-sns {
     display: flex;
 
@@ -75,12 +56,10 @@ a {
       display: inline-block;
       flex-grow: 1;
     }
-
   }
 
   // footer-more
   &-more {
-
     border-top: rem(1px) solid $footer-border-color;
     padding-top: rem(32px);
     margin-top: rem(52px);
@@ -91,7 +70,6 @@ a {
     @include font-14px-B;
     display: block;
   }
-
 
   @include desktop {
     position: relative;
@@ -138,7 +116,5 @@ a {
       float: right;
       display: inline-block;
     }
-
   }
-
 }
