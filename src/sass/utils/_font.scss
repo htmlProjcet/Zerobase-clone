@@ -1,28 +1,28 @@
-@use './unit';
+@use './unit' as *;
 //B: bold style. 안 붙어있는 건 normal
 
-@mixin font-32-B {
+@mixin font-32px-B {
   font-size: rem(24px);
   font-weight: 700;
   letter-spacing: rem(-0.3px);
   line-height: rem(36px);
 }
 
-@mixin font-24-B {
+@mixin font-24px-B {
   font-size: rem(24px);
   font-weight: 700;
   letter-spacing: rem(-0.3px);
   line-height: rem(36px);
 }
 
-@mixin font-18-B {
+@mixin font-18px-B {
   font-size: rem(18px);
   font-weight: 700;
   letter-spacing: rem(-0.3px);
   line-height: rem(27px);
 }
 
-@mixin font-16-B {
+@mixin font-16px-B {
   font-size: rem(16px);
   font-weight: 700;
   letter-spacing: rem(-0.3px);
