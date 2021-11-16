@@ -1,0 +1,7 @@
+@use './../utils'as *;
+
+.body {
+  padding: 0;
+  @include autoMargin;
+  width: rem(335px);
+}
