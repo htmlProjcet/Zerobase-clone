@@ -1,0 +1,93 @@
+@use './../utils'as *;
+
+body,
+h2,
+h3,
+dl,
+dd,
+dt,
+ul,
+li,
+a {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-style: normal;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer {
+  background-color: $footer-bg;
+  color: $footer-font;
+  @include font-14px;
+  padding: rem(2px) rem(16px) rem(56px);
+
+  &-section__title {
+    color: $white;
+    text-transform: uppercase;
+    @include font-16-B;
+    margin-top: rem(32px);
+    margin-bottom: rem(16px);
+  }
+
+  &-section-list dt:first-child {
+    display: none;
+  }
+
+  &-section-list:nth-child(1) span {
+    display: none;
+  }
+
+  &-section-list dt,
+  &-section-list dd {
+    display: inline-block;
+  }
+
+  @at-root .privacy,
+  .refund,
+  .help {
+    color: $white;
+    @include font-14px-B;
+  }
+
+  @at-root .tel li {
+    list-style-type: '-';
+    margin-left: rem(6px);
+    text-indent: rem(4px);
+  }
+
+  // footer-more
+  &-more {
+    display: block;
+    border-top: rem(1px) solid $footer-border-color;
+    padding-top: rem(32px);
+    margin-top: rem(52px);
+    text-align: center;
+  }
+
+
+  @at-root .copyright {
+    @include font-14px-B;
+  }
+
+
+
+  @media desktop {
+    display: flex;
+    flex-wrap: nowrap;
+
+    @at-root .company {
+      flex: 2;
+    }
+
+    @at-root .etc {
+      flex: 1;
+    }
+
+    @at-root .contact {
+      flex: 1;
+    }
+
+  }
+}
