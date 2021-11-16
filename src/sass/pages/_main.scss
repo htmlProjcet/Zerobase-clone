@@ -1,4 +1,4 @@
-@use './../utils' as *;
+@use "./../utils" as *;
 
 .main-nav {
   padding: rem(24px) 0;
@@ -25,6 +25,10 @@
     overflow: hidden;
     border-radius: 30%;
 
+    @include tablet {
+      width: rem(96px);
+      height: rem(96px);
+    }
     @include desktop {
       width: rem(96px);
       height: rem(96px);
@@ -35,12 +39,16 @@
     width: rem(64px);
     height: rem(64px);
     border-radius: 30%;
-    transition: all 0.2s linear;
+    transition: transform 0.2s linear;
     &:hover {
       transform: scale(1.2);
     }
 
     @include desktop {
+      width: rem(96px);
+      height: rem(96px);
+    }
+    @include tablet {
       width: rem(96px);
       height: rem(96px);
     }
@@ -64,6 +72,9 @@ figcaption {
   color: $black;
   @include font-12px-B;
   @include desktop {
+    @include font-18px-B;
+  }
+  @include tablet {
     @include font-18px-B;
   }
 }
