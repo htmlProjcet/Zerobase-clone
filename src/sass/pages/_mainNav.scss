@@ -1,0 +1,36 @@
+@use './../utils' as *;
+
+.main-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.main__item {
+  list-style-type: none;
+  img {
+    width: 64px;
+    height: 64px;
+    @include desktop {
+      width: 96px;
+      height: 96px;
+    }
+  }
+  figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  a {
+    text-decoration-line: none;
+  }
+}
+figcaption {
+  text-align: center;
+  color: $black;
+  @include font-12px-B;
+  @include desktop {
+    @include font-18px-B;
+  }
+}
