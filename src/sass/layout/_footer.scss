@@ -1,6 +1,16 @@
-@use './../utils' as *;
+@use './../utils'as *;
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  margin-right: calc(-100vw - -100%);
+}
 
 .footer {
+
+  @include boxSizeFull;
   overflow: hidden;
   background-color: $footer-bg;
   color: $footer-font;
@@ -9,6 +19,12 @@
   @include font-14px;
   padding: rem(2px) rem(16px) rem(56px);
   display: block;
+
+  // --- width
+  width: 100vw;
+  padding-left: 15vw;
+  padding-right: 15vw;
+  // --- width
 
   &-section__title {
     color: $white;
@@ -37,8 +53,8 @@
   }
 
   @at-root .privacy,
-    .refund,
-    .help {
+  .refund,
+  .help {
     color: $white;
     @include font-14px-B;
   }
@@ -49,21 +65,31 @@
     text-indent: rem(4px);
   }
 
-  .footer-sns {
+  @at-root .footer-sns {
     display: flex;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
 
     li {
-      display: inline-block;
       flex-grow: 1;
     }
   }
 
+  .copyright::first-letter {
+    text-transform: uppercase;
+  }
+
   // footer-more
   &-more {
+    width: 70vw;
     border-top: rem(1px) solid $footer-border-color;
     padding-top: rem(32px);
     margin-top: rem(52px);
     text-align: center;
+    display: flex;
+    flex-direction: column;
   }
 
   @at-root .copyright {
@@ -71,50 +97,72 @@
     display: block;
   }
 
+  @at-root &-sns {
+    float: right;
+    width: 200px;
+
+    img {
+      vertical-align: bottom;
+    }
+  }
+
   @include desktop {
     position: relative;
 
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     padding-bottom: rem(200px);
 
     @at-root .company {
-      flex-grow: 2;
+      flex-grow: 1;
     }
 
     @at-root .etc {
       flex-grow: 1;
+
+      a {
+        font-style: normal;
+        text-decoration: none;
+        color: inherit;
+      }
     }
 
     @at-root .contact {
       flex-grow: 1;
+
+      a {
+        font-style: normal;
+        text-decoration: none;
+        color: inherit;
+      }
     }
 
     @at-root &-more {
+      width: 70vw;
+      display: inline-block;
+
       @include autoMargin;
       position: absolute;
       bottom: rem(70px);
-      width: 96%;
     }
 
     @at-root .copyright {
       text-align: left;
     }
 
-    @at-root &-sns {
-      float: right;
-      width: 200px;
-
-      img {
-        vertical-align: bottom;
-      }
-    }
   }
 
   @include tablet {
-    @at-root &-sns {
-      float: right;
-      display: inline-block;
+    display: inline-block;
+
+    // flex-direction: row-reverse;
+    &-sns {
+      margin-right: 0;
+    }
+
+    @at-root .copyright {
+      display: none;
     }
   }
 }

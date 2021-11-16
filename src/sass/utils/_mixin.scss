@@ -53,3 +53,18 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+// box size
+@mixin boxSizeMinMax($min: 768px, $max:1200px) {
+  min-width: rem($min);
+  max-width: rem($max);
+  @include autoMargin;
+}
+
+@mixin boxSizeFull {
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
+  margin-right: initial;
+  width: 100vw;
+}
