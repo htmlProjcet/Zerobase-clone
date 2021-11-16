@@ -1,9 +1,7 @@
 @use 'sass:map';
 
 // Breakpoints
-$breakpoints: (mobile: 480px,
-  tablet: 768px,
-  desktop: 1200px);
+$breakpoints: ();
 
 @function errorMessage($breakpoint-name) {
   @return '#{$breakpoint-name} : 중단점이 유효하지 않습니다.';
@@ -16,9 +14,7 @@ $breakpoints: (mobile: 480px,
     @media (min-width: $breakpoint-value) {
       @content;
     }
-  }
-
-  @else {
+  } @else {
     @error errorMessage($breakpoint);
   }
 }
@@ -30,9 +26,7 @@ $breakpoints: (mobile: 480px,
     @media (max-width: ($breakpoint-value - 1)) {
       @content;
     }
-  }
-
-  @else {
+  } @else {
     @error errorMessage($breakpoint);
   }
 }
@@ -45,34 +39,35 @@ $breakpoints: (mobile: 480px,
     @media (min-width: $from-value) and (max-width: ($until-value - 1)) {
       @content;
     }
-  }
-
-  @else {
-    @if (map.has-key($breakpoints, $from)==false) {
+  } @else {
+    @if (map.has-key($breakpoints, $from) ==false) {
       @error errorMessage($from);
     }
 
-    @if (map.has-key($breakpoints, $until)==false) {
+    @if (map.has-key($breakpoints, $until) ==false) {
       @error errorMessage($until);
     }
   }
 }
 
+$mobile: 480px;
+$tablet: 900px;
+$desktop: 1200px;
 
 @mixin mobile {
-  @media (max-width: $mobile) {
+  @media (max-width: #{$mobile}) {
     @content;
   }
 }
-
+$tablet: 900px;
 @mixin tablet {
-  @media (max-width: $tablet) {
+  @media (max-width: #{$tablet}) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media (min-width: $desktop) {
+  @media (min-width: #{$tablet + 1}) {
     @content;
   }
 }
