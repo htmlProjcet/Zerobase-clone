@@ -1,4 +1,4 @@
-@use './../utils'as *;
+@use './../utils' as *;
 
 body,
 h2,
@@ -55,8 +55,8 @@ a {
   }
 
   @at-root .privacy,
-  .refund,
-  .help {
+    .refund,
+    .help {
     color: $white;
     @include font-14px-B;
   }
@@ -87,19 +87,15 @@ a {
     text-align: center;
   }
 
-
   @at-root .copyright {
     @include font-14px-B;
     display: block;
   }
 
 
-
-
-
-
   @include desktop {
     position: relative;
+
     display: flex;
     flex-wrap: wrap;
     padding-bottom: rem(200px);
