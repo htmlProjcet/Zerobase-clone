@@ -1,0 +1,136 @@
+@use './../utils' as *;
+
+.banner {
+  padding-top: rem(48px);
+  padding-bottom: rem(48px);
+  background-color: pink;
+  
+  position: relative;
+
+  &-list-status{
+    display: block;
+    background-color: rgba(0,0,0,0.24);
+    width:rem(74px);
+    line-height: rem(36px);
+    text-align: center;
+    position: absolute;
+    bottom:rem(7px);
+    border-radius: 20px;
+
+    @include desktop{
+      bottom:rem(48px);
+      left: 10vw;
+    }
+    @include tablet{
+      bottom:rem(48px);
+      left: 5vw;
+    }
+  }
+
+  &-list-control{
+    position: absolute;
+    bottom:rem(7px);
+    left: rem(150px);
+
+    @include desktop{
+      bottom:rem(48px);
+      left: 20vw;
+    }
+    @include tablet{
+      bottom:rem(48px);
+      left: 15vw;
+    }
+
+    button{
+      width: rem(36px);
+      height: rem(36px);
+      border: none;
+      background-color: rgba(0,0,0,0.24);
+      margin:0;
+    }
+    .button-prev{
+      border-bottom-left-radius: rem(18px);
+      border-top-left-radius: rem(18px);
+    }
+    .button-pause{
+      margin-left: rem(-4px);
+      // margin-right: rem(-4px);
+    }
+    .button-next{
+      margin-left: rem(-5px);
+
+      border-bottom-right-radius: rem(18px);
+      border-top-right-radius: rem(18px);
+    }
+  }
+
+
+  &-container li{
+    @include desktop {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+    }
+    @include tablet {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+    }
+    img{
+      flex-grow: 1;
+      width: 50%;
+      border-radius: 20px;
+      @include mobile{
+        width: 100%;
+      }
+    }
+    div{
+      flex-grow: 1;
+    }
+    
+  }
+  a {
+    text-decoration: none;
+  }
+  
+  &-desc {
+    @include mobile{
+      margin-top: rem(16px);
+
+    }
+    h3 {
+      @include font-24px-B;
+      width: 100%;
+      color: $white;
+
+      @include mobile{
+        margin-top: rem(6px);
+        margin-bottom: rem(8px);
+      }
+    }
+    p {
+      font-size: rem(12px);
+      color: $white;
+    }
+  }
+  &__status {
+    @include font-12px-B;
+    color: $red;
+    text-transform: uppercase;
+  }
+  img {
+    // width: 100%;
+  }
+  
+  @include boxSizeFull;
+  width: 100vw;
+  padding-left: 10vw;
+  padding-right: 10vw;
+
+  @include tablet{
+    @include boxSizeFull;
+  width: 100vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  }
+}
