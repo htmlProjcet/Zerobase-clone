@@ -1,0 +1,14 @@
+@use './../utils' as *;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: $main-bg;
+  @include paddingX(10);
+  @include desktop {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
