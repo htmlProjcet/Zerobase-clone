@@ -1,4 +1,5 @@
 @use './../utils' as *;
+
 .main-nav {
   padding: rem(24px) 0;
   @include tablet {
@@ -8,12 +9,14 @@
     padding: rem(48px) 0;
   }
 }
+
 .main-list {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
 }
+
 .main__item {
   list-style-type: none;
   span {
@@ -27,6 +30,7 @@
       height: rem(96px);
     }
   }
+
   img {
     width: rem(64px);
     height: rem(64px);
@@ -41,16 +45,19 @@
       height: rem(96px);
     }
   }
+
   figure {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+
   a {
     text-decoration-line: none;
   }
 }
+
 figcaption {
   margin-top: rem(16px);
   text-align: center;
@@ -58,5 +65,24 @@ figcaption {
   @include font-12px-B;
   @include desktop {
     @include font-18px-B;
+  }
+}
+
+.lecturer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-lecturer {
+  @include mobile {
+    flex-basis: 100%;
+  }
+
+  @include tablet {
+    flex-basis: 50%;
+  }
+
+  @include desktop {
+    flex-basis: 33%;
   }
 }
