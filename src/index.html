@@ -17,8 +17,15 @@
 
       <div class="header-members">
         <!-- 데스크탑일 때 아이콘 추가 -->
-        <a class="header-members__login" href="">로그인</a>
-        <a class="header-members__signup" href="">회원가입</a>
+        <a class="header-members__login" href="">
+          <img src="./assets/login.svg" alt="로그인" />
+          로그인</a
+        >
+
+        <a class="header-members__signup" href="">
+          <img src="./assets/signup.svg" alt="회원가입" />
+          회원가입</a
+        >
       </div>
 
       <!-- hamberger button -->
@@ -131,7 +138,7 @@
       <h2 class="sr-only">배너</h2>
       <a href="#">
         <article class="banner-container">
-          <img src="./assets/banner.png" alt="한 달 한 권" />
+          <!-- <img src="./assets/banner.png" alt="한 달 한 권" /> -->
           <div class="banner-desc">
             <span class="status banner__status" lang="en">new</span>
             <h3>제대로 읽는 베스트셀러 한 달 한 권</h3>
@@ -265,18 +272,25 @@
         </article>
       </section>
       <section class="content lecturer">
-        <h2 class="content__title">네카라쿠배 프론트앤드 3기 수호자</h2>
+        <!-- <h2 class="content__title">네카라쿠배 프론트앤드 3기 수호자</h2> -->
         <article class="card card-lecturer">
           <h3 class="sr-only">최우영 강사님</h3>
-          <strong class="card__subtitle">
-            Git/Github <span aria-hidden="true">|</span> 협업의 시작은
-            git/github로부터
-          </strong>
-          <p class="card__desc">git/github로 받는 스트레스는 이제 그만 !</p>
-          <div class="tag-wrapper">
-            <span class="tag card__tag">수강가능</span>
-            <span class="tag card__tag">Git/Github</span>
-            <span class="tag card__tag">협업의 기본</span>
+          <img
+            class="card__thumb"
+            src="./assets/thumb.png"
+            alt="최우영 강사님"
+          />
+          <div class="card-lecturer-info">
+            <strong class="card__subtitle">
+              Git/Github <span aria-hidden="true">|</span> 협업의 시작은
+              git/github로부터
+            </strong>
+            <p class="card__desc">git/github로 받는 스트레스는 이제 그만 !</p>
+            <div class="tag-wrapper">
+              <span class="tag card__tag">수강가능</span>
+              <span class="tag card__tag">Git/Github</span>
+              <span class="tag card__tag">협업의 기본</span>
+            </div>
           </div>
         </article>
         <article class="card card-lecturer">
