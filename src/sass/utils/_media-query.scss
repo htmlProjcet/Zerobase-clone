@@ -1,13 +1,7 @@
 @use 'sass:map';
 
 // Breakpoints
-$breakpoints: (
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px,
-);
+$breakpoints: ();
 
 @function errorMessage($breakpoint-name) {
   @return '#{$breakpoint-name} : 중단점이 유효하지 않습니다.';
@@ -20,9 +14,7 @@ $breakpoints: (
     @media (min-width: $breakpoint-value) {
       @content;
     }
-  }
-
-  @else {
+  } @else {
     @error errorMessage($breakpoint);
   }
 }
@@ -34,9 +26,7 @@ $breakpoints: (
     @media (max-width: ($breakpoint-value - 1)) {
       @content;
     }
-  }
-
-  @else {
+  } @else {
     @error errorMessage($breakpoint);
   }
 }
@@ -49,21 +39,23 @@ $breakpoints: (
     @media (min-width: $from-value) and (max-width: ($until-value - 1)) {
       @content;
     }
-  }
-
-  @else {
-    @if (map.has-key($breakpoints, $from)==false) {
+  } @else {
+    @if (map.has-key($breakpoints, $from) ==false) {
       @error errorMessage($from);
     }
 
-    @if (map.has-key($breakpoints, $until)==false) {
+    @if (map.has-key($breakpoints, $until) ==false) {
       @error errorMessage($until);
     }
   }
 }
 
 $mobile: 480px;
+<<<<<<< HEAD
 $tablet: 768px;
+=======
+$tablet: 900px;
+>>>>>>> e4daf498ca327abf758d6add5786d1948ae1f663
 $desktop: 1200px;
 
 @mixin mobile {
@@ -71,15 +63,23 @@ $desktop: 1200px;
     @content;
   }
 }
-
+$tablet: 900px;
 @mixin tablet {
+<<<<<<< HEAD
   @media (max-width: #{$tablet}) {
+=======
+  @media (min-width: #{$mobile+1}) and (max-width: #{$tablet}) {
+>>>>>>> e4daf498ca327abf758d6add5786d1948ae1f663
     @content;
   }
 }
 
 @mixin desktop {
+<<<<<<< HEAD
   @media (max-width: #{$desktop}) {
+=======
+  @media (min-width: #{$tablet + 1}) {
+>>>>>>> e4daf498ca327abf758d6add5786d1948ae1f663
     @content;
   }
 }

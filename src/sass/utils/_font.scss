@@ -1,55 +1,56 @@
+@use './unit' as *;
 //B: bold style. 안 붙어있는 건 normal
 
-@mixin font-32-B {
-  font-size: 24px;
+@mixin font-32px-B {
+  font-size: rem(24px);
   font-weight: 700;
-  letter-spacing: -0.3px;
-  line-height: 36px;
+  letter-spacing: rem(-0.3px);
+  line-height: rem(36px);
 }
 
-@mixin font-24-B {
-  font-size: 24px;
+@mixin font-24px-B {
+  font-size: rem(24px);
   font-weight: 700;
-  letter-spacing: -0.3px;
-  line-height: 36px;
+  letter-spacing: rem(-0.3px);
+  line-height: rem(36px);
 }
 
-@mixin font-18-B {
-  font-size: 18px;
+@mixin font-18px-B {
+  font-size: rem(18px);
   font-weight: 700;
-  letter-spacing: -0.3px;
-  line-height: 27px;
+  letter-spacing: rem(-0.3px);
+  line-height: rem(27px);
 }
 
-@mixin font-16-B {
-  font-size: 16px;
+@mixin font-16px-B {
+  font-size: rem(16px);
   font-weight: 700;
-  letter-spacing: -0.3px;
-  line-height: 24px;
+  letter-spacing: rem(-0.3px);
+  line-height: rem(24px);
 }
 
 @mixin font-14px {
-  font-size: 14px;
-  letter-spacing: -0.3px;
-  line-height: 21px;
+  font-size: rem(14px);
+  letter-spacing: rem(-0.3px);
+  line-height: rem(21px);
 }
 
 @mixin font-14px-B {
-  font-size: 14px;
+  font-size: rem(14px);
   font-weight: 700;
-  letter-spacing: -0.3px;
-  line-height: 21px;
+  letter-spacing: rem(-0.3px);
+  line-height: rem(21px);
 }
 
 @mixin font-12px-B {
-  font-size: 12px;
+  font-size: rem(12px);
   font-weight: 700;
-  letter-spacing: -0.3px;
-  line-height: 18px;
+  letter-spacing: rem(-0.3px);
+  line-height: rem(18px);
 }
 
 @mixin font-12px {
-  font-size: 12px;
-  letter-spacing: -0.3px;
-  line-height: 18px;
+  font-size: rem(12px);
+  letter-spacing: rem(-0.3px);
+  line-height: rem(18px);
 }

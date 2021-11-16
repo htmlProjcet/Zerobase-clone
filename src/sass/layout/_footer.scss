@@ -1,4 +1,4 @@
-@use './../utils'as *;
+@use './../utils' as *;
 
 body,
 h2,
@@ -15,23 +15,33 @@ a {
   font-style: normal;
   text-decoration: none;
   color: inherit;
+
 }
 
 .footer {
+  overflow: hidden;
   background-color: $footer-bg;
   color: $footer-font;
+  word-wrap: break-word;
+  word-break: keep-all;
   @include font-14px;
   padding: rem(2px) rem(16px) rem(56px);
+  display: block;
 
   &-section__title {
     color: $white;
     text-transform: uppercase;
-    @include font-16-B;
+    @include font-16px-B;
     margin-top: rem(32px);
     margin-bottom: rem(16px);
   }
 
-  &-section-list dt:first-child {
+  &-section-list div {
+    display: block;
+  }
+
+  &-section-list div:nth-child(1) dt,
+  &-section-list div:nth-child(1) span {
     display: none;
   }
 
@@ -45,8 +55,8 @@ a {
   }
 
   @at-root .privacy,
-  .refund,
-  .help {
+    .refund,
+    .help {
     color: $white;
     @include font-14px-B;
   }
@@ -57,37 +67,78 @@ a {
     text-indent: rem(4px);
   }
 
+
+  .footer-sns {
+    display: flex;
+
+    li {
+      display: inline-block;
+      flex-grow: 1;
+    }
+
+  }
+
   // footer-more
   &-more {
-    display: block;
+
     border-top: rem(1px) solid $footer-border-color;
     padding-top: rem(32px);
     margin-top: rem(52px);
     text-align: center;
   }
 
-
   @at-root .copyright {
     @include font-14px-B;
+    display: block;
   }
 
 
+  @include desktop {
+    position: relative;
 
-  @media desktop {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    padding-bottom: rem(200px);
 
     @at-root .company {
-      flex: 2;
+      flex-grow: 2;
     }
 
     @at-root .etc {
-      flex: 1;
+      flex-grow: 1;
     }
 
     @at-root .contact {
-      flex: 1;
+      flex-grow: 1;
+    }
+
+    @at-root &-more {
+      @include autoMargin;
+      position: absolute;
+      bottom: rem(70px);
+      width: 96%;
+    }
+
+    @at-root .copyright {
+      text-align: left;
+    }
+
+    @at-root &-sns {
+      float: right;
+      width: 200px;
+
+      img {
+        vertical-align: bottom;
+      }
+    }
+  }
+
+  @include tablet {
+    @at-root &-sns {
+      float: right;
+      display: inline-block;
     }
 
   }
+
 }
