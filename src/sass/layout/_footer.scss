@@ -1,4 +1,4 @@
-@use './../utils'as *;
+@use './../utils' as *;
 
 body,
 h2,
@@ -26,7 +26,7 @@ a {
   &-section__title {
     color: $white;
     text-transform: uppercase;
-    @include font-16-B;
+    @include font-16px-B;
     margin-top: rem(32px);
     margin-bottom: rem(16px);
   }
@@ -45,8 +45,8 @@ a {
   }
 
   @at-root .privacy,
-  .refund,
-  .help {
+    .refund,
+    .help {
     color: $white;
     @include font-14px-B;
   }
@@ -66,12 +66,9 @@ a {
     text-align: center;
   }
 
-
   @at-root .copyright {
     @include font-14px-B;
   }
-
-
 
   @media desktop {
     display: flex;
@@ -88,6 +85,5 @@ a {
     @at-root .contact {
       flex: 1;
     }
-
   }
 }

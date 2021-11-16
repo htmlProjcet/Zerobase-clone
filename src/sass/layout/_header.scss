@@ -1,1 +1,44 @@
 @use './../utils' as *;
+
+.header {
+  background: $header-bg;
+  @include flexbox;
+  @include font-16px-B;
+
+  &-nav-list {
+    @include flexbox;
+  }
+
+  &-nav__button {
+    text-transform: uppercase;
+    @include font-16px-B;
+  }
+
+  @include desktop {
+    &-members {
+      order: 1;
+    }
+    .button--burger {
+      display: none;
+    }
+    .sub-menu {
+      display: none;
+    }
+  }
+
+  @include mobile {
+    &-members,
+    &-nav {
+      display: none;
+    }
+  }
+
+  @include tablet {
+    background: blue;
+    @include font-12px-B;
+    &-members,
+    &-nav {
+      display: none;
+    }
+  }
+}
