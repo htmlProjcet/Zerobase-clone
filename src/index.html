@@ -14,37 +14,34 @@
 
 <body>
   <header class="header">
-    <div class="header-layout">
-      <h1 class="header__title">
-        <a class="logo" href="#"><img src="./assets/logo.svg" alt="zerobase" /></a>
-      </h1>
-      <nav class="header-nav">
-        <!-- hamberger button -->
-        <button class="buttonNone button--burger" aria-label="메뉴 열기">
-          <span class="button--burger__top"></span>
-          <span class="button--burger__middle"></span>
-          <span class="button--burger__bottom"></span>
-        </button>
-        <!-- 데스크탑일 때 아이콘 추가 -->
+    <h1 class="header__title">
+      <a class="logo" href="#"><img src="./assets/logo.svg" alt="zerobase" /></a>
+    </h1>
 
+    <!-- hamberger button -->
+    <button class="buttonNone button--burger" aria-label="메뉴 열기">
+      <span class="button--burger__top"></span>
+      <span class="button--burger__middle"></span>
+      <span class="button--burger__bottom"></span>
+    </button>
+    <div class="nav-menu">
+      <!-- 데스크탑일 때 아이콘 추가 -->
+      <div class="login">
+        <img class="loginIcon" src="./assets/login.svg" alt="로그인" />
+        <a class="header-members__login" href="./signin.html">로그인</a>
+      </div>
+      <div class="signup">
+        <img class="signupIcon" src="./assets/login.svg" alt="회원가입" />
+        <a class="header-members__signup" href="./signup.html">회원가입</a>
+      </div>
+
+      <nav class="header-nav">
         <h2 class="sr-only">메인 메뉴</h2>
         <ul class="header-nav-list">
           <li class="header-nav__item">
-            <div class="member-service">
-              <div class="login">
-                <img class="loginIcon" src="./assets/login.svg" alt="로그인">
-                <a class="header-members__login" href="">로그인</a>
-              </div>
-              <div class="signup">
-                <img class="signupIcon" src="./assets/login.svg" alt="회원가입">
-                <a class="header-members__signup" href="">회원가입</a>
-              </div>
-            </div>
-          </li>
-          <li class="header-nav__item">
             <button type="button" class="button header-nav__button">
               about us
-              <img src="./assets/icon-arrow.svg" alt="화살표">
+              <img src="./assets/icon-arrow.svg" alt="화살표" />
             </button>
             <ul class="sub-menu">
               <li>
@@ -56,8 +53,9 @@
             </ul>
           </li>
           <li class="header-nav__item">
-            <button class="button header-nav__button" type="button">이벤트
-              <img src="./assets/icon-arrow.svg" alt="화살표">
+            <button class="button header-nav__button" type="button">
+              이벤트
+              <img src="./assets/icon-arrow.svg" alt="화살표" />
             </button>
             <ul class="sub-menu">
               <li>
@@ -74,7 +72,7 @@
           <li class="header-nav__item">
             <button class="button header-nav__button" type="button">
               온라인 강의
-              <img src="./assets/icon-arrow.svg" alt="화살표">
+              <img src="./assets/icon-arrow.svg" alt="화살표" />
             </button>
             <ul class="sub-menu">
               <li>
@@ -89,8 +87,9 @@
             </ul>
           </li>
           <li class="header-nav__item">
-            <button class="button header-nav__button" type="button">재테크
-              <img src="./assets/icon-arrow.svg" alt="화살표">
+            <button class="button header-nav__button" type="button">
+              재테크
+              <img src="./assets/icon-arrow.svg" alt="화살표" />
             </button>
             <ul class="sub-menu">
               <li>
@@ -105,9 +104,9 @@
             </ul>
           </li>
           <li class="header-nav__item">
-            <button class="button header-nav__button" type="button">네카라쿠배
-              <img src="./assets/icon-arrow.svg" alt="화살표">
-
+            <button class="button header-nav__button" type="button">
+              네카라쿠배
+              <img src="./assets/icon-arrow.svg" alt="화살표" />
             </button>
             <ul class="sub-menu">
               <li>
@@ -150,7 +149,23 @@
       </div>
       <ul class="banner-container">
         <li class="banner-slide is-active">
-          <img src="./assets/banner.png" alt="한 달 한 권" />
+          <img src="./assets/banner_1.png" alt="데이터 사이언스 강의" />
+          <div class="banner-desc">
+            <span class="status banner__status" lang="ko">이번주 한정</span>
+            <h3>모든 데이터 사이언스 강의 <br />최대 73% 역대급 할인</h3>
+            <p>단 일주일, 50% 추가 할인 쿠폰 증정(~11/14)</p>
+          </div>
+        </li>
+        <li class="banner-slide">
+          <img src="./assets/banner_2.png" alt="완주반" />
+          <div class="banner-desc">
+            <span class="status banner__status" lang="en">Best</span>
+            <h3>완주반에선 <br />매주 환급해드려요!</h3>
+            <p>완주반과 함께하면 끝까지 할 수 있어요!</p>
+          </div>
+        </li>
+        <li class="banner-slide">
+          <img src="./assets/banner_3.png" alt="한 달 한 권" />
           <div class="banner-desc">
             <span class="status banner__status" lang="en">new</span>
             <h3>제대로 읽는 베스트셀러 <br />한 달 한 권</h3>
@@ -158,27 +173,11 @@
           </div>
         </li>
         <li class="banner-slide">
-          <img src="./assets/banner.png" alt="한 달 한 권" />
+          <img src="./assets/banner_4.jpg" alt="커리어" />
           <div class="banner-desc">
-            <span class="status banner__status" lang="en">new</span>
-            <h3>제대로 읽는 베스트셀러 <br />한 달 한 권</h3>
-            <p>현직자의 해설 강의와 함께 읽어보세요</p>
-          </div>
-        </li>
-        <li class="banner-slide">
-          <img src="./assets/banner.png" alt="한 달 한 권" />
-          <div class="banner-desc">
-            <span class="status banner__status" lang="en">new</span>
-            <h3>제대로 읽는 베스트셀러 <br />한 달 한 권</h3>
-            <p>현직자의 해설 강의와 함께 읽어보세요</p>
-          </div>
-        </li>
-        <li class="banner-slide">
-          <img src="./assets/banner.png" alt="한 달 한 권" />
-          <div class="banner-desc">
-            <span class="status banner__status" lang="en">new</span>
-            <h3>제대로 읽는 베스트셀러 <br />한 달 한 권</h3>
-            <p>현직자의 해설 강의와 함께 읽어보세요</p>
+            <span class="status banner__status" lang="en">open</span>
+            <h3>'내 커리어 이대로 괜찮을까' <br />고민된다면</h3>
+            <p>지금 프로필 업데이트하고 무료 상담받아 가세요!</p>
           </div>
         </li>
       </ul>
@@ -426,8 +425,8 @@
         <h3 class="sr-only">강호준 팀장님</h3>
         <div class="card-lecturer-info">
           <strong class="card__subtitle">
-            멘토링 <span aria-hidden="true">|</span> 누구보다 차갑지만 누구보다
-            따뜻한 멘토링비법
+            멘토링 <span aria-hidden="true">|</span> 누구보다 차갑지만
+            누구보다 따뜻한 멘토링비법
           </strong>
           <p class="card__desc">
             압박면접의 표본을 보여주는 면접방식과 면접자를 압도하는 포스로
@@ -462,8 +461,8 @@
         <img class="card__thumb" src="./assets/park.jpg" alt="박상언 매니저님" />
         <div class="card-lecturer-info">
           <strong class="card__subtitle">
-            학습관리 <span aria-hidden="true">|</span> 네카라쿠배 프론트엔드 3기
-            학습관리법
+            학습관리 <span aria-hidden="true">|</span> 네카라쿠배 프론트엔드
+            3기 학습관리법
           </strong>
           <p class="card__desc">
             학습관리 매니저의 정석이란? 프론트엔드 스쿨의 세 기수를 경험하며
