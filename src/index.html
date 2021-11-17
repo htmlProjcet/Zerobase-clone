@@ -35,7 +35,7 @@
           <img class="signupIcon" src="./assets/login.svg" alt="회원가입" />
           <a class="header-members__signup" href="./signup.html">회원가입</a>
         </div>
-        
+
         <nav class="header-nav">
           <h2 class="sr-only">메인 메뉴</h2>
           <ul class="header-nav-list">
@@ -140,7 +140,6 @@
     <aside class="banner">
       <h2 class="sr-only">배너</h2>
       <a href="#">
-
         <span class="banner-list-status"
           ><span class="current-page" aria-label="현재 페이지">1</span>
           <span aria-hidden="true">/</span>
@@ -150,7 +149,6 @@
           <button class="button-prev">&lt;</button
           ><button class="button-pause">||</button
           ><button class="button-next">&gt;</button>
-
         </div>
         <ul class="banner-container">
           <li class="banner-slide is-active">
@@ -194,51 +192,52 @@
         <h2 class="sr-only">네비게이션</h2>
         <ul class="main-list">
           <li class="main__item">
-            <a href="#">
+            <a href="#practice">
               <figure>
                 <span class="main__item-wrapper">
-                  <img src="./assets/media.jpg" alt="media" />
+                  <img src="./assets/result.png" alt="result" />
                 </span>
-                <figcaption>취업 특화 교육 과정</figcaption>
+                <figcaption>실습결과물</figcaption>
               </figure>
             </a>
           </li>
           <li class="main__item">
-            <a href="">
+            <a href="#course">
               <figure>
                 <span class="main__item-wrapper">
-                  <img src="./assets/media.jpg" alt="media" />
+                  <img src="./assets/class.png" alt="class" />
                 </span>
-                <figcaption>매주 환급, 완주반</figcaption>
+                <figcaption>인기클래스</figcaption>
               </figure>
             </a>
           </li>
           <li class="main__item">
-            <a href="">
+            <a href="#letcurer">
               <figure>
                 <span class="main__item-wrapper">
-                  <img src="./assets/media.jpg" alt="media" />
+                  <img src="./assets/mentor.png" alt="mentor" />
                 </span>
-                <figcaption>베스트셀러 해설</figcaption>
+                <figcaption>강사진</figcaption>
               </figure>
             </a>
           </li>
           <li class="main__item">
-            <a href="">
+            <a href="#company">
               <figure>
                 <span class="main__item-wrapper">
-                  <img src="./assets/media.jpg" alt="media" />
+                  <img src="./assets/media.png" alt="media" />
                 </span>
-                <figcaption>제로베이스 미디어</figcaption>
+                <figcaption>제로베이스</figcaption>
               </figure>
             </a>
           </li>
         </ul>
       </nav>
       <section class="content practice">
-        <h2 class="content__title">네카라쿠배 프론트엔드 3기 실습 결과물</h2>
+        <h2 class="content__title" id="practice">
+          네카라쿠배 프론트엔드 3기 실습 결과물
+        </h2>
         <article class="card card-practice">
-
           <img src="./assets/media.jpg" alt="추가 필요" />
           <div class="card-practice-info">
             <h3 class="card__title">고정형 레이아웃 웹 만들기</h3>
@@ -303,7 +302,7 @@
         </div>
       </section>
       <section class="content course">
-        <h2 class="content__title">네카라쿠배 3기 인기 클래스</h2>
+        <h2 class="content__title" id="course">네카라쿠배 3기 인기 클래스</h2>
         <article class="carousel-course">
           <h3 class="carousel-title">HTML, CSS 기초</h3>
           <span class="status carousel-status">best</span>
@@ -328,7 +327,7 @@
       <section class="content lecturer">
         <h2 class="content__title">네카라쿠배 프론트앤드 3기 수호자</h2>
         <article class="card card-lecturer">
-          <h3 class="sr-only">최우영 강사님</h3>
+          <h3 class="sr-only" id="letcurer">최우영 강사님</h3>
           <img
             class="card__thumb"
             src="./assets/thumb.png"
@@ -461,7 +460,7 @@
     <footer class="footer">
       <h2 class="sr-only">제로베이스 회사 정보</h2>
       <section class="company">
-        <h3 class="footer-section__title">company</h3>
+        <h3 class="footer-section__title" id="company">company</h3>
         <dl class="footer-section-list">
           <div>
             <dt>회사 이름</dt>
