@@ -40,6 +40,7 @@
 
         &+label {
           top: 10%;
+          @include font-12px;
         }
       }
 
