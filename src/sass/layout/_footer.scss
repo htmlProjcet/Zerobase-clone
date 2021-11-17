@@ -116,7 +116,7 @@ body {
 
   // footer-more
   &-more {
-    width: 70vw;
+    width: 80vw;
     border-top: rem(1px) solid $footer-border-color;
     padding-top: rem(32px);
     margin-top: rem(52px);
@@ -141,11 +141,9 @@ body {
 
   @include desktop {
     position: relative;
-
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-bottom: rem(200px);
 
     @at-root .company {
       flex-grow: 1;
@@ -161,11 +159,9 @@ body {
     }
 
     @at-root &-more {
-      width: 70vw;
       display: inline-block;
 
       @include autoMargin;
-      position: absolute;
       bottom: rem(70px);
     }
 
