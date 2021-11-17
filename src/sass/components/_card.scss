@@ -10,6 +10,8 @@
   margin-bottom: 12px;
   border-radius: rem(10px);
 
+  background-color: $white;
+  
   &__title {
     @include font-32px-B;
   }

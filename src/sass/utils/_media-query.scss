@@ -40,11 +40,11 @@ $breakpoints: ();
       @content;
     }
   } @else {
-    @if (map.has-key($breakpoints, $from) ==false) {
+    @if (map.has-key($breakpoints, $from) == false) {
       @error errorMessage($from);
     }
 
-    @if (map.has-key($breakpoints, $until) ==false) {
+    @if (map.has-key($breakpoints, $until) == false) {
       @error errorMessage($until);
     }
   }
@@ -59,8 +59,9 @@ $desktop: 1200px;
     @content;
   }
 }
+
 @mixin tablet {
-  @media (min-width: #{$mobile+1}) and (max-width: #{$tablet}) {
+  @media (min-width: #{$mobile + 1}) and (max-width: #{$tablet}) {
     @content;
   }
 }
