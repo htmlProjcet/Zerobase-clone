@@ -9,16 +9,19 @@
   @include paddingX(16px);
   @include paddingY(16px);
 
+  @include mobile {
+    max-height: rem(150px);
+  }
+
   margin-bottom: 12px;
   border-radius: rem(10px);
 
   background-color: $white;
-  
+
   &__title {
     @include font-32px-B;
-    
   }
-  
+
   &__thumb {
     border-radius: rem(10px);
     width: 100%;
