@@ -1,6 +1,7 @@
 const prevBtn = document.querySelector('.button-prev');
 const nextBtn = document.querySelector('.button-next');
 const pauseBtn = document.querySelector('.button-pause');
+let state = document.querySelector('.current-page');
 let slides = document.querySelectorAll('.banner-slide');
 let currentSlide = 0;
 let slideInterval = setInterval(showSlides, 1000);
@@ -10,6 +11,8 @@ function showSlides() {
   slides[currentSlide].classList.remove('is-active');
   currentSlide = (currentSlide + 1) % slides.length;
   slides[currentSlide].classList.add('is-active');
+
+  state.innerHTML = currentSlide + 1;
 }
 
 function pauseSlide() {
