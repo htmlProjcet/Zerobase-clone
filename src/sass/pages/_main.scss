@@ -1,4 +1,4 @@
-@use "./../utils" as *;
+@use './../utils' as *;
 
 .main-nav {
   padding: rem(24px) 0;
@@ -70,12 +70,14 @@
   position: relative;
 }
 
-.practice {
-  @include flexbox($wrap: wrap);
+.practice-container {
+  @include flexbox($wrap: no-wrap);
+  overflow: hidden;
 }
 
 .card-practice {
   flex-basis: 33%;
+  flex-shrink: 0;
 }
 
 .content {

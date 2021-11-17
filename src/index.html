@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>제로베이스 - 밑바닥부터 끝까지 듣는 온라인 강의</title>
     <link rel="stylesheet" href="./style/index.css" />
+
     <script defer src="./js/navigation.js"></script>
     <script defer src="./js/banner.js"></script>
   </head>
@@ -191,109 +192,109 @@
         <h2 class="sr-only">네비게이션</h2>
         <ul class="main-list">
           <li class="main__item">
-            <a href="#">
+            <a href="#practice">
               <figure>
                 <span class="main__item-wrapper">
-                  <img src="./assets/media.jpg" alt="media" />
+                  <img src="./assets/result.png" alt="result" />
                 </span>
-                <figcaption>취업 특화 교육 과정</figcaption>
+                <figcaption>실습결과물</figcaption>
               </figure>
             </a>
           </li>
           <li class="main__item">
-            <a href="">
+            <a href="#course">
               <figure>
                 <span class="main__item-wrapper">
-                  <img src="./assets/media.jpg" alt="media" />
+                  <img src="./assets/class.png" alt="class" />
                 </span>
-                <figcaption>매주 환급, 완주반</figcaption>
+                <figcaption>인기클래스</figcaption>
               </figure>
             </a>
           </li>
           <li class="main__item">
-            <a href="">
+            <a href="#letcurer">
               <figure>
                 <span class="main__item-wrapper">
-                  <img src="./assets/media.jpg" alt="media" />
+                  <img src="./assets/mentor.png" alt="mentor" />
                 </span>
-                <figcaption>베스트셀러 해설</figcaption>
+                <figcaption>강사진</figcaption>
               </figure>
             </a>
           </li>
           <li class="main__item">
-            <a href="">
+            <a href="#company">
               <figure>
                 <span class="main__item-wrapper">
-                  <img src="./assets/media.jpg" alt="media" />
+                  <img src="./assets/media.png" alt="media" />
                 </span>
-                <figcaption>제로베이스 미디어</figcaption>
+                <figcaption>제로베이스</figcaption>
               </figure>
             </a>
           </li>
         </ul>
       </nav>
       <section class="content practice">
-        <h2 class="content__title">네카라쿠배 프론트엔드 3기 실습 결과물</h2>
-        <div class="practice-container">
-          <article class="card card-practice">
-            <img src="./assets/media.jpg" alt="추가 필요" />
-            <div class="card-practice-info">
-              <h3 class="card__title">고정형 레이아웃 웹 만들기</h3>
-              <strong class="card__subtitle">
-                5일 미니프로젝트 <span aria-hidden="true">|</span> HTML 마크업
-              </strong>
-              <p class="card__desc">
-                고정형 레이아웃으로 HTML/CSS 기초 완벽하게 잡기
-              </p>
-              <div class="tag-wrapper">
-                <span class="tag card__tag">HTML/CSS</span>
-                <span class="tag card__tag">고정형</span>
-              </div>
-            </div>
-          </article>
-          <article class="card card-practice">
-            <h3 class="card__title">반응형 레이아웃 웹 만들기</h3>
+        <h2 class="content__title" id="practice">
+          네카라쿠배 프론트엔드 3기 실습 결과물
+        </h2>
+        <article class="card card-practice">
+          <img src="./assets/media.jpg" alt="추가 필요" />
+          <div class="card-practice-info">
+            <h3 class="card__title">고정형 레이아웃 웹 만들기</h3>
             <strong class="card__subtitle">
-              2일 미니프로젝트 <span aria-hidden="true">|</span> 반응형 웹을
-              자유자재로
+              5일 미니프로젝트 <span aria-hidden="true">|</span> HTML 마크업
             </strong>
             <p class="card__desc">
-              비효율적인 고정형 레이아웃은 그만! 넷플릭스 클론코딩을 통한 반응형
-              웹 입문하기
+              고정형 레이아웃으로 HTML/CSS 기초 완벽하게 잡기
             </p>
             <div class="tag-wrapper">
               <span class="tag card__tag">HTML/CSS</span>
-              <span class="tag card__tag">반응형</span>
-              <span class="tag card__tag">넷플릭스</span>
-              <span class="tag card__tag">클론코딩</span>
+              <span class="tag card__tag">고정형</span>
             </div>
-          </article>
-          <article class="card card-practice">
-            <h3 class="card__title">SASS를 사용하여 웹 만들기</h3>
-            <strong class="card__subtitle">
-              3일 미니프로젝트 <span aria-hidden="true">|</span> SASS를 통한 CSS
-              관리방법
-            </strong>
-            <p class="card__desc">반응형 레이아웃과 SASS를 동시에 잡아보자!</p>
-            <div class="tag-wrapper">
-              <span class="tag card__tag">SASS</span>
-              <span class="tag card__tag">넷플릭스</span>
-              <span class="tag card__tag">클론코딩</span>
-            </div>
-          </article>
-          <article class="card card-practice">
-            <h3 class="card__title">Tailwind를 사용하여 웹 만들기</h3>
-            <strong class="card__subtitle">
-              1일 미니프로젝트 <span aria-hidden="true">|</span> Tailwind를 통한
-              CSS 관리방법
-            </strong>
-            <p class="card__desc">기존의 웹카페로 Tailwind 완전정복!</p>
-            <div class="tag-wrapper">
-              <span class="tag card__tag">수강가능</span>
-              <span class="tag card__tag">프로그래밍</span>
-            </div>
-          </article>
-        </div>
+          </div>
+        </article>
+        <article class="card card-practice">
+          <h3 class="card__title">반응형 레이아웃 웹 만들기</h3>
+          <strong class="card__subtitle">
+            2일 미니프로젝트 <span aria-hidden="true">|</span> 반응형 웹을
+            자유자재로
+          </strong>
+          <p class="card__desc">
+            비효율적인 고정형 레이아웃은 그만! 넷플릭스 클론코딩을 통한 반응형
+            웹 입문하기
+          </p>
+          <div class="tag-wrapper">
+            <span class="tag card__tag">HTML/CSS</span>
+            <span class="tag card__tag">반응형</span>
+            <span class="tag card__tag">넷플릭스</span>
+            <span class="tag card__tag">클론코딩</span>
+          </div>
+        </article>
+        <article class="card card-practice">
+          <h3 class="card__title">SASS를 사용하여 웹 만들기</h3>
+          <strong class="card__subtitle">
+            3일 미니프로젝트 <span aria-hidden="true">|</span> SASS를 통한 CSS
+            관리방법
+          </strong>
+          <p class="card__desc">반응형 레이아웃과 SASS를 동시에 잡아보자!</p>
+          <div class="tag-wrapper">
+            <span class="tag card__tag">SASS</span>
+            <span class="tag card__tag">넷플릭스</span>
+            <span class="tag card__tag">클론코딩</span>
+          </div>
+        </article>
+        <article class="card card-practice">
+          <h3 class="card__title">Tailwind를 사용하여 웹 만들기</h3>
+          <strong class="card__subtitle">
+            1일 미니프로젝트 <span aria-hidden="true">|</span> Tailwind를 통한
+            CSS 관리방법
+          </strong>
+          <p class="card__desc">기존의 웹카페로 Tailwind 완전정복!</p>
+          <div class="tag-wrapper">
+            <span class="tag card__tag">수강가능</span>
+            <span class="tag card__tag">프로그래밍</span>
+          </div>
+        </article>
 
         <div class="button-group">
           <button type="button">좌</button>
@@ -301,7 +302,7 @@
         </div>
       </section>
       <section class="content course">
-        <h2 class="content__title">네카라쿠배 3기 인기 클래스</h2>
+        <h2 class="content__title" id="course">네카라쿠배 3기 인기 클래스</h2>
         <article class="carousel-course">
           <h3 class="carousel-title">HTML, CSS 기초</h3>
           <span class="status carousel-status">best</span>
@@ -326,7 +327,7 @@
       <section class="content lecturer">
         <h2 class="content__title">네카라쿠배 프론트앤드 3기 수호자</h2>
         <article class="card card-lecturer">
-          <h3 class="sr-only">최우영 강사님</h3>
+          <h3 class="sr-only" id="letcurer">최우영 강사님</h3>
           <img
             class="card__thumb"
             src="./assets/thumb.png"
@@ -459,7 +460,7 @@
     <footer class="footer">
       <h2 class="sr-only">제로베이스 회사 정보</h2>
       <section class="company">
-        <h3 class="footer-section__title">company</h3>
+        <h3 class="footer-section__title" id="company">company</h3>
         <dl class="footer-section-list">
           <div>
             <dt>회사 이름</dt>

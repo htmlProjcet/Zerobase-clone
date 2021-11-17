@@ -1,10 +1,10 @@
-@use "sass:map";
+@use 'sass:map';
 
 // Breakpoints
 $breakpoints: ();
 
 @function errorMessage($breakpoint-name) {
-  @return "#{$breakpoint-name} : 중단점이 유효하지 않습니다.";
+  @return '#{$breakpoint-name} : 중단점이 유효하지 않습니다.';
 }
 
 @mixin respond-from($breakpoint) {

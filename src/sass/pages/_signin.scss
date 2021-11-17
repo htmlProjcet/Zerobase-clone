@@ -1,10 +1,8 @@
-@use './../utils'as *;
+@use "./../utils" as *;
 
 .body {
-
   header {
     text-align: center;
-
     @include paddingY(48px);
   }
 
@@ -18,7 +16,10 @@
 
   @include autoMargin;
   width: rem(335px);
-
+  @include mobile {
+    width: 100%;
+    max-width: 335px;
+  }
   &-label {
     position: absolute;
   }
@@ -29,7 +30,10 @@
     margin-bottom: rem(16px);
     display: flex;
     position: relative;
-
+    @include mobile {
+      width: 100%;
+      max-width: 335px;
+    }
     input {
       flex-grow: 1;
       padding-top: rem(13px);
@@ -41,8 +45,9 @@
         outline: none;
         border-bottom: 1px solid blue;
 
-        &+label {
+        & + label {
           top: 10%;
+          @include font-12px;
         }
       }
 
@@ -50,12 +55,10 @@
         outline: none;
         border-bottom: 1px solid blue;
 
-        &+label {
+        & + label {
           top: 10%;
         }
       }
-
-
     }
 
     label {
@@ -66,7 +69,6 @@
       color: rgb(160, 160, 160);
     }
   }
-
 
   &-auto-find {
     display: flex;
@@ -116,5 +118,4 @@
       color: $black;
     }
   }
-
 }
