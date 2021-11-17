@@ -48,18 +48,35 @@ a {
     margin-top: rem(50px);
     margin-bottom: rem(30px);
   }
+  @include mobile {
+    &-nav-list {
+      display: block;
+      right: -100%;
+      transition: all 350ms ease-in-out;
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow-y: auto;
+      &.is-active {
+        right: 0;
+        transform: none;
+      }
+    }
+  }
 
-  &-nav-list {
-    display: block;
-    right: -100%;
-    transition: all 350ms ease-in-out;
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow-y: auto;
-    &.is-active {
-      right: 0;
-      transform: none;
+  @include tablet {
+    &-nav-list {
+      display: block;
+      right: -100%;
+      transition: all 350ms ease-in-out;
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow-y: auto;
+      &.is-active {
+        right: 0;
+        transform: none;
+      }
     }
   }
 
