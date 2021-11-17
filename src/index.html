@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>제로베이스 - 밑바닥부터 끝까지 듣는 온라인 강의</title>
     <link rel="stylesheet" href="./style/index.css" />
+
     <script defer src="./js/navigation.js"></script>
     <script defer src="./js/banner.js"></script>
   </head>
@@ -28,13 +29,13 @@
         <!-- 데스크탑일 때 아이콘 추가 -->
         <div class="login">
           <img class="loginIcon" src="./assets/login.svg" alt="로그인" />
-          <a class="header-members__login" href="">로그인</a>
+          <a class="header-members__login" href="./signin.html">로그인</a>
         </div>
         <div class="signup">
           <img class="signupIcon" src="./assets/login.svg" alt="회원가입" />
-          <a class="header-members__signup" href="">회원가입</a>
+          <a class="header-members__signup" href="./signup.html">회원가입</a>
         </div>
-
+        
         <nav class="header-nav">
           <h2 class="sr-only">메인 메뉴</h2>
           <ul class="header-nav-list">
@@ -139,22 +140,24 @@
     <aside class="banner">
       <h2 class="sr-only">배너</h2>
       <a href="#">
+
         <span class="banner-list-status"
           ><span class="current-page" aria-label="현재 페이지">1</span>
           <span aria-hidden="true">/</span>
           <span aria-label="전체 페이지">4</span>
         </span>
         <div class="banner-list-control">
-          <button class="button-prev">&lt;</button>
-          <button class="button-pause">||</button>
-          <button class="button-next">&gt;</button>
+          <button class="button-prev">&lt;</button
+          ><button class="button-pause">||</button
+          ><button class="button-next">&gt;</button>
+
         </div>
         <ul class="banner-container">
           <li class="banner-slide is-active">
             <img src="./assets/banner.png" alt="한 달 한 권" />
             <div class="banner-desc">
               <span class="status banner__status" lang="en">new</span>
-              <h3>제대로 읽는 베스트셀러 한 달 한 권 1</h3>
+              <h3>제대로 읽는 베스트셀러 <br />한 달 한 권</h3>
               <p>현직자의 해설 강의와 함께 읽어보세요</p>
             </div>
           </li>
@@ -162,7 +165,7 @@
             <img src="./assets/banner.png" alt="한 달 한 권" />
             <div class="banner-desc">
               <span class="status banner__status" lang="en">new</span>
-              <h3>제대로 읽는 베스트셀러 한 달 한 권 2</h3>
+              <h3>제대로 읽는 베스트셀러 <br />한 달 한 권</h3>
               <p>현직자의 해설 강의와 함께 읽어보세요</p>
             </div>
           </li>
@@ -170,7 +173,7 @@
             <img src="./assets/banner.png" alt="한 달 한 권" />
             <div class="banner-desc">
               <span class="status banner__status" lang="en">new</span>
-              <h3>제대로 읽는 베스트셀러 한 달 한 권 3</h3>
+              <h3>제대로 읽는 베스트셀러 <br />한 달 한 권</h3>
               <p>현직자의 해설 강의와 함께 읽어보세요</p>
             </div>
           </li>
@@ -178,13 +181,14 @@
             <img src="./assets/banner.png" alt="한 달 한 권" />
             <div class="banner-desc">
               <span class="status banner__status" lang="en">new</span>
-              <h3>제대로 읽는 베스트셀러 한 달 한 권 4</h3>
+              <h3>제대로 읽는 베스트셀러 <br />한 달 한 권</h3>
               <p>현직자의 해설 강의와 함께 읽어보세요</p>
             </div>
           </li>
         </ul>
       </a>
     </aside>
+
     <main class="main">
       <nav class="main-nav">
         <h2 class="sr-only">네비게이션</h2>
@@ -234,6 +238,7 @@
       <section class="content practice">
         <h2 class="content__title">네카라쿠배 프론트엔드 3기 실습 결과물</h2>
         <article class="card card-practice">
+
           <img src="./assets/media.jpg" alt="추가 필요" />
           <div class="card-practice-info">
             <h3 class="card__title">고정형 레이아웃 웹 만들기</h3>
