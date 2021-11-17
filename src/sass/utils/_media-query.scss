@@ -1,10 +1,10 @@
-@use 'sass:map';
+@use "sass:map";
 
 // Breakpoints
 $breakpoints: ();
 
 @function errorMessage($breakpoint-name) {
-  @return '#{$breakpoint-name} : 중단점이 유효하지 않습니다.';
+  @return "#{$breakpoint-name} : 중단점이 유효하지 않습니다.";
 }
 
 @mixin respond-from($breakpoint) {
@@ -50,12 +50,17 @@ $breakpoints: ();
   }
 }
 
+<<<<<<< HEAD
 $mobile: 480px;
 <<<<<<< HEAD
 $tablet: 768px;
 =======
 $tablet: 900px;
 >>>>>>> e4daf498ca327abf758d6add5786d1948ae1f663
+=======
+$mobile: 710px;
+$tablet: 960px;
+>>>>>>> 7eaec7e835df9b596c4a583c066e49c2f5f13070
 $desktop: 1200px;
 
 @mixin mobile {
@@ -63,7 +68,6 @@ $desktop: 1200px;
     @content;
   }
 }
-$tablet: 900px;
 @mixin tablet {
 <<<<<<< HEAD
   @media (max-width: #{$tablet}) {

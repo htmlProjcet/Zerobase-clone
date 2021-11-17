@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>제로베이스 - 밑바닥부터 끝까지 듣는 온라인 강의</title>
     <link rel="stylesheet" href="./style/index.css" />
+    <script defer src="./js/navigation.js"></script>
+    <script defer src="./js/banner.js"></script>
   </head>
+
   <body>
     <header class="header">
       <h1 class="header__title">
@@ -15,136 +18,171 @@
         /></a>
       </h1>
 
-      <div class="header-members">
-        <!-- 데스크탑일 때 아이콘 추가 -->
-        <a class="header-members__login" href="">
-          <img src="./assets/login.svg" alt="로그인" />
-          로그인</a
-        >
-
-        <a class="header-members__signup" href="">
-          <img src="./assets/signup.svg" alt="회원가입" />
-          회원가입</a
-        >
-      </div>
-
       <!-- hamberger button -->
-      <button class="button button--burger" aria-label="메뉴 열기">
+      <button class="buttonNone button--burger" aria-label="메뉴 열기">
         <span class="button--burger__top"></span>
         <span class="button--burger__middle"></span>
         <span class="button--burger__bottom"></span>
       </button>
-      <nav class="header-nav">
-        <h2 class="sr-only">메인 메뉴</h2>
-        <ul class="header-nav-list">
-          <li class="header-nav__item">
-            <button type="button" class="button header-nav__button">
-              about us
-              <img src="./assets/icon-arrow.svg" alt="화살표" />
-            </button>
-            <ul class="sub-menu">
-              <li>
-                <a href="#">제로베이스 소개</a>
-              </li>
-              <li>
-                <a href="#">제로베이스 미디어</a>
-              </li>
-            </ul>
-          </li>
-          <li class="header-nav__item">
-            <button class="button menu-button" type="button">
-              이벤트
-              <img src="./assets/icon-arrow.svg" alt="화살표" />
-            </button>
-            <ul class="sub-menu">
-              <li>
-                <a href="#">최대 73% 할인 참교육 위-크!</a>
-              </li>
-              <li>
-                <a href="#">무료 커리어상담 오픈</a>
-              </li>
-              <li>
-                <a href="#">완주하면 혜택을!</a>
-              </li>
-            </ul>
-          </li>
-          <li class="header-nav__item">
-            <button class="button header-nav__button" type="button">
-              온라인 강의
-              <img src="./assets/icon-arrow.svg" alt="화살표" />
-            </button>
-            <ul class="sub-menu">
-              <li>
-                <a href="#">온라인 완주반</a>
-              </li>
-              <li>
-                <a href="#">한달한권</a>
-              </li>
-              <li>
-                <a href="#">하루 10분컷</a>
-              </li>
-            </ul>
-          </li>
-          <li class="header-nav__item">
-            <button class="button menu-button" type="button">
-              재테크
-              <img src="./assets/icon-arrow.svg" alt="화살표" />
-            </button>
-            <ul class="sub-menu">
-              <li>
-                <a href="#">김학주 교수의 투자 바이블</a>
-              </li>
-              <li>
-                <a href="#">리장에게 배우는 월가의 영웅</a>
-              </li>
-              <li>
-                <a href="#">데이터로 하는 투자. 이헌열의 퀸트</a>
-              </li>
-            </ul>
-          </li>
-          <li class="header-nav__item">
-            <button class="button menu-button" type="button">
-              네카라쿠배
-              <img src="./assets/icon-arrow.svg" alt="화살표" />
-            </button>
-            <ul class="sub-menu">
-              <li>
-                <a href="#">about 네카라쿠배</a>
-              </li>
-              <li>
-                <a href="#">프론트엔드 1기(마감)</a>
-              </li>
-              <li>
-                <a href="#">프론트엔드 2기(마감)</a>
-              </li>
-              <li>
-                <a href="#">프론트엔드 3기(마감)</a>
-              </li>
-              <li>
-                <a href="#">프론트엔드 온라인(마감)</a>
-              </li>
-              <li>
-                <a href="#">데이터 사이언스 1기(마감)</a>
-              </li>
-              <li>
-                <a href="#">데이터 사이언스 온라인(마감)</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
+      <div class="nav-menu">
+        <!-- 데스크탑일 때 아이콘 추가 -->
+        <div class="login">
+          <img class="loginIcon" src="./assets/login.svg" alt="로그인" />
+          <a class="header-members__login" href="">로그인</a>
+        </div>
+        <div class="signup">
+          <img class="signupIcon" src="./assets/login.svg" alt="회원가입" />
+          <a class="header-members__signup" href="">회원가입</a>
+        </div>
+
+        <nav class="header-nav">
+          <h2 class="sr-only">메인 메뉴</h2>
+          <ul class="header-nav-list">
+            <li class="header-nav__item">
+              <button type="button" class="button header-nav__button">
+                about us
+                <img src="./assets/icon-arrow.svg" alt="화살표" />
+              </button>
+              <ul class="sub-menu">
+                <li>
+                  <a href="#">제로베이스 소개</a>
+                </li>
+                <li>
+                  <a href="#">제로베이스 미디어</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header-nav__item">
+              <button class="button header-nav__button" type="button">
+                이벤트
+                <img src="./assets/icon-arrow.svg" alt="화살표" />
+              </button>
+              <ul class="sub-menu">
+                <li>
+                  <a href="#">최대 73% 할인 참교육 위-크!</a>
+                </li>
+                <li>
+                  <a href="#">무료 커리어상담 오픈</a>
+                </li>
+                <li>
+                  <a href="#">완주하면 혜택을!</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header-nav__item">
+              <button class="button header-nav__button" type="button">
+                온라인 강의
+                <img src="./assets/icon-arrow.svg" alt="화살표" />
+              </button>
+              <ul class="sub-menu">
+                <li>
+                  <a href="#">온라인 완주반</a>
+                </li>
+                <li>
+                  <a href="#">한달한권</a>
+                </li>
+                <li>
+                  <a href="#">하루 10분컷</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header-nav__item">
+              <button class="button header-nav__button" type="button">
+                재테크
+                <img src="./assets/icon-arrow.svg" alt="화살표" />
+              </button>
+              <ul class="sub-menu">
+                <li>
+                  <a href="#">김학주 교수의 투자 바이블</a>
+                </li>
+                <li>
+                  <a href="#">리장에게 배우는 월가의 영웅</a>
+                </li>
+                <li>
+                  <a href="#">데이터로 하는 투자. 이헌열의 퀸트</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header-nav__item">
+              <button class="button header-nav__button" type="button">
+                네카라쿠배
+                <img src="./assets/icon-arrow.svg" alt="화살표" />
+              </button>
+              <ul class="sub-menu">
+                <li>
+                  <a href="#">about 네카라쿠배</a>
+                </li>
+                <li>
+                  <a href="#">프론트엔드 1기(마감)</a>
+                </li>
+                <li>
+                  <a href="#">프론트엔드 2기(마감)</a>
+                </li>
+                <li>
+                  <a href="#">프론트엔드 3기(마감)</a>
+                </li>
+                <li>
+                  <a href="#">프론트엔드 온라인(마감)</a>
+                </li>
+                <li>
+                  <a href="#">데이터 사이언스 1기(마감)</a>
+                </li>
+                <li>
+                  <a href="#">데이터 사이언스 온라인(마감)</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <aside class="banner">
       <h2 class="sr-only">배너</h2>
       <a href="#">
-        <article class="banner-container">
-          <!-- <img src="./assets/banner.png" alt="한 달 한 권" /> -->
-          <div class="banner-desc">
-            <span class="status banner__status" lang="en">new</span>
-            <h3>제대로 읽는 베스트셀러 한 달 한 권</h3>
-            <p>현직자의 해설 강의아 함께 읽어보세요</p>
-          </div>
-        </article>
+        <span class="banner-list-status"
+          ><span class="current-page" aria-label="현재 페이지">1</span>
+          <span aria-hidden="true">/</span>
+          <span aria-label="전체 페이지">4</span>
+        </span>
+        <div class="banner-list-control">
+          <button class="button-prev">&lt;</button>
+          <button class="button-pause">||</button>
+          <button class="button-next">&gt;</button>
+        </div>
+        <ul class="banner-container">
+          <li class="banner-slide is-active">
+            <img src="./assets/banner.png" alt="한 달 한 권" />
+            <div class="banner-desc">
+              <span class="status banner__status" lang="en">new</span>
+              <h3>제대로 읽는 베스트셀러 한 달 한 권 1</h3>
+              <p>현직자의 해설 강의와 함께 읽어보세요</p>
+            </div>
+          </li>
+          <li class="banner-slide">
+            <img src="./assets/banner.png" alt="한 달 한 권" />
+            <div class="banner-desc">
+              <span class="status banner__status" lang="en">new</span>
+              <h3>제대로 읽는 베스트셀러 한 달 한 권 2</h3>
+              <p>현직자의 해설 강의와 함께 읽어보세요</p>
+            </div>
+          </li>
+          <li class="banner-slide">
+            <img src="./assets/banner.png" alt="한 달 한 권" />
+            <div class="banner-desc">
+              <span class="status banner__status" lang="en">new</span>
+              <h3>제대로 읽는 베스트셀러 한 달 한 권 3</h3>
+              <p>현직자의 해설 강의와 함께 읽어보세요</p>
+            </div>
+          </li>
+          <li class="banner-slide">
+            <img src="./assets/banner.png" alt="한 달 한 권" />
+            <div class="banner-desc">
+              <span class="status banner__status" lang="en">new</span>
+              <h3>제대로 읽는 베스트셀러 한 달 한 권 4</h3>
+              <p>현직자의 해설 강의와 함께 읽어보세요</p>
+            </div>
+          </li>
+        </ul>
       </a>
     </aside>
     <main class="main">
@@ -196,16 +234,19 @@
       <section class="content practice">
         <h2 class="content__title">네카라쿠배 프론트엔드 3기 실습 결과물</h2>
         <article class="card card-practice">
-          <h3 class="card__title">고정형 레이아웃 웹 만들기</h3>
-          <strong class="card__subtitle">
-            5일 미니프로젝트 <span aria-hidden="true">|</span> HTML 마크업
-          </strong>
-          <p class="card__desc">
-            고정형 레이아웃으로 HTML/CSS 기초 완벽하게 잡기
-          </p>
-          <div class="tag-wrapper">
-            <span class="tag card__tag">HTML/CSS</span>
-            <span class="tag card__tag">고정형</span>
+          <img src="./assets/media.jpg" alt="추가 필요" />
+          <div class="card-practice-info">
+            <h3 class="card__title">고정형 레이아웃 웹 만들기</h3>
+            <strong class="card__subtitle">
+              5일 미니프로젝트 <span aria-hidden="true">|</span> HTML 마크업
+            </strong>
+            <p class="card__desc">
+              고정형 레이아웃으로 HTML/CSS 기초 완벽하게 잡기
+            </p>
+            <div class="tag-wrapper">
+              <span class="tag card__tag">HTML/CSS</span>
+              <span class="tag card__tag">고정형</span>
+            </div>
           </div>
         </article>
         <article class="card card-practice">
@@ -280,7 +321,7 @@
         </article>
       </section>
       <section class="content lecturer">
-        <!-- <h2 class="content__title">네카라쿠배 프론트앤드 3기 수호자</h2> -->
+        <h2 class="content__title">네카라쿠배 프론트앤드 3기 수호자</h2>
         <article class="card card-lecturer">
           <h3 class="sr-only">최우영 강사님</h3>
           <img
@@ -336,8 +377,8 @@
         <article class="card card-lecturer">
           <h3 class="sr-only">김태원 강사님</h3>
           <strong class="card__subtitle">
-            자료구조/알고리즘 <span aria-hidden="true">|</span> 알고리즘 1타
-            강사가 알려주는 자료구조/알고리즘
+            자료구조/알고리즘 <span aria-hidden="true">|</span> 1타 강사가
+            알려주는 자료구조/알고리즘
           </strong>
           <p class="card__desc">
             항상 새롭게 느껴지는 코딩테스트는 그만 ! 유형분석과 정형화를 통한
@@ -345,7 +386,6 @@
           </p>
           <div class="tag-wrapper">
             <span class="tag card__tag">수강가능</span>
-            <span class="tag card__tag">자료구조</span>
             <span class="tag card__tag">알고리즘</span>
             <span class="tag card__tag">코딩테스트</span>
           </div>
@@ -482,7 +522,6 @@
       <div class="footer-more">
         <ul class="footer-sns">
           <!-- 아이콘 추가 -->
-
           <li>
             <a href="">
               <img src="./assets/blog.svg" alt="네이버 블로그" />
