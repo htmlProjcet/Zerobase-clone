@@ -71,12 +71,19 @@
 }
 
 .practice-container {
-  @include flexbox($wrap: no-wrap);
+  @include flexbox($wrap: nowrap);
   overflow: hidden;
 }
 
 .card-practice {
-  flex-basis: 33%;
+  margin-right: rem(16px);
+  @include mobile {
+    width: 90%;
+
+    // flex-basis: 95%;
+  }
+
+  // flex-basis: 33%;
   flex-shrink: 0;
 }
 
@@ -120,15 +127,16 @@ figcaption {
 }
 
 .card-lecturer {
+  @include autoMargin;
   @include mobile {
     flex-basis: 100%;
   }
 
   @include tablet {
-    flex-basis: 50%;
+    flex-basis: 48%;
   }
 
   @include desktop {
-    flex-basis: 33%;
+    flex-basis: 32%;
   }
 }
