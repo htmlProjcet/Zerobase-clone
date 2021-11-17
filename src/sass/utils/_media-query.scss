@@ -50,17 +50,8 @@ $breakpoints: ();
   }
 }
 
-<<<<<<< HEAD
-$mobile: 480px;
-<<<<<<< HEAD
-$tablet: 768px;
-=======
-$tablet: 900px;
->>>>>>> e4daf498ca327abf758d6add5786d1948ae1f663
-=======
 $mobile: 710px;
 $tablet: 960px;
->>>>>>> 7eaec7e835df9b596c4a583c066e49c2f5f13070
 $desktop: 1200px;
 
 @mixin mobile {
@@ -69,21 +60,13 @@ $desktop: 1200px;
   }
 }
 @mixin tablet {
-<<<<<<< HEAD
-  @media (max-width: #{$tablet}) {
-=======
   @media (min-width: #{$mobile+1}) and (max-width: #{$tablet}) {
->>>>>>> e4daf498ca327abf758d6add5786d1948ae1f663
     @content;
   }
 }
 
 @mixin desktop {
-<<<<<<< HEAD
-  @media (max-width: #{$desktop}) {
-=======
   @media (min-width: #{$tablet + 1}) {
->>>>>>> e4daf498ca327abf758d6add5786d1948ae1f663
     @content;
   }
 }
