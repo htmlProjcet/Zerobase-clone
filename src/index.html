@@ -11,30 +11,34 @@
 
 <body>
   <header class="header">
-    <h1 class="header__title">
-      <a class="logo" href="#"><img src="./assets/logo.svg" alt="zerobase" /></a>
-    </h1>
-
-    <!-- hamberger button -->
-    <button class="buttonNone button--burger" aria-label="메뉴 열기">
-      <span class="button--burger__top"></span>
-      <span class="button--burger__middle"></span>
-      <span class="button--burger__bottom"></span>
-    </button>
-    <div class="nav-menu">
-      <!-- 데스크탑일 때 아이콘 추가 -->
-      <div class="login">
-        <img class="loginIcon" src="./assets/login.svg" alt="로그인">
-        <a class="header-members__login" href="">로그인</a>
-      </div>
-      <div class="signup">
-        <img class="signupIcon" src="./assets/login.svg" alt="회원가입">
-        <a class="header-members__signup" href="">회원가입</a>
-      </div>
-
+    <div class="header-layout">
+      <h1 class="header__title">
+        <a class="logo" href="#"><img src="./assets/logo.svg" alt="zerobase" /></a>
+      </h1>
       <nav class="header-nav">
+        <!-- hamberger button -->
+        <button class="buttonNone button--burger" aria-label="메뉴 열기">
+          <span class="button--burger__top"></span>
+          <span class="button--burger__middle"></span>
+          <span class="button--burger__bottom"></span>
+        </button>
+        <!-- 데스크탑일 때 아이콘 추가 -->
+
         <h2 class="sr-only">메인 메뉴</h2>
+        <!-- <ul class="header-nav-list is-active"> -->
         <ul class="header-nav-list">
+          <li class="header-nav__item">
+            <div class="member-service">
+              <div class="login">
+                <img class="loginIcon" src="./assets/login.svg" alt="로그인">
+                <a class="header-members__login" href="">로그인</a>
+              </div>
+              <div class="signup">
+                <img class="signupIcon" src="./assets/login.svg" alt="회원가입">
+                <a class="header-members__signup" href="">회원가입</a>
+              </div>
+            </div>
+          </li>
           <li class="header-nav__item">
             <button type="button" class="button header-nav__button">
               about us
@@ -134,27 +138,27 @@
   <aside class="banner">
     <h2 class="sr-only">배너</h2>
     <a href="#">
-          <span class="banner-list-status">1/4</span>
-          <div class="banner-list-control">
-            <button class="button-prev">&lt;</button>
-            <button class="button-pause">||</button>
-            <button class="button-next">&gt;</button>
+      <span class="banner-list-status">1/4</span>
+      <div class="banner-list-control">
+        <button class="button-prev">&lt;</button>
+        <button class="button-pause">||</button>
+        <button class="button-next">&gt;</button>
+      </div>
+      <ul class="banner-container">
+        <li>
+          <img src="./assets/banner.png" alt="한 달 한 권" />
+          <div class="banner-desc">
+            <span class="status banner__status" lang="en">new</span>
+            <h3>제대로 읽는 베스트셀러 한 달 한 권</h3>
+            <p>현직자의 해설 강의와 함께 읽어보세요</p>
           </div>
-          <ul class="banner-container">
-            <li>
-              <img src="./assets/banner.png" alt="한 달 한 권" />
-              <div class="banner-desc">
-                <span class="status banner__status" lang="en">new</span>
-                <h3>제대로 읽는 베스트셀러 한 달 한 권</h3>
-                <p>현직자의 해설 강의와 함께 읽어보세요</p>
-              </div>
-            </li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </a>
-      </aside>
+        </li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </a>
+  </aside>
   <main class="main">
     <nav class="main-nav">
       <h2 class="sr-only">네비게이션</h2>
