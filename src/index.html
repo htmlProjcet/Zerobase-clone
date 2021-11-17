@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>제로베이스 - 밑바닥부터 끝까지 듣는 온라인 강의</title>
     <link rel="stylesheet" href="./style/index.css" />
-
     <script defer src="./js/navigation.js"></script>
     <script defer src="./js/banner.js"></script>
   </head>
@@ -35,7 +34,7 @@
           <img class="signupIcon" src="./assets/login.svg" alt="회원가입" />
           <a class="header-members__signup" href="./signup.html">회원가입</a>
         </div>
-        
+
         <nav class="header-nav">
           <h2 class="sr-only">메인 메뉴</h2>
           <ul class="header-nav-list">
@@ -140,7 +139,6 @@
     <aside class="banner">
       <h2 class="sr-only">배너</h2>
       <a href="#">
-
         <span class="banner-list-status"
           ><span class="current-page" aria-label="현재 페이지">1</span>
           <span aria-hidden="true">/</span>
@@ -150,7 +148,6 @@
           <button class="button-prev">&lt;</button
           ><button class="button-pause">||</button
           ><button class="button-next">&gt;</button>
-
         </div>
         <ul class="banner-container">
           <li class="banner-slide is-active">
@@ -237,65 +234,66 @@
       </nav>
       <section class="content practice">
         <h2 class="content__title">네카라쿠배 프론트엔드 3기 실습 결과물</h2>
-        <article class="card card-practice">
-
-          <img src="./assets/media.jpg" alt="추가 필요" />
-          <div class="card-practice-info">
-            <h3 class="card__title">고정형 레이아웃 웹 만들기</h3>
+        <div class="practice-container">
+          <article class="card card-practice">
+            <img src="./assets/media.jpg" alt="추가 필요" />
+            <div class="card-practice-info">
+              <h3 class="card__title">고정형 레이아웃 웹 만들기</h3>
+              <strong class="card__subtitle">
+                5일 미니프로젝트 <span aria-hidden="true">|</span> HTML 마크업
+              </strong>
+              <p class="card__desc">
+                고정형 레이아웃으로 HTML/CSS 기초 완벽하게 잡기
+              </p>
+              <div class="tag-wrapper">
+                <span class="tag card__tag">HTML/CSS</span>
+                <span class="tag card__tag">고정형</span>
+              </div>
+            </div>
+          </article>
+          <article class="card card-practice">
+            <h3 class="card__title">반응형 레이아웃 웹 만들기</h3>
             <strong class="card__subtitle">
-              5일 미니프로젝트 <span aria-hidden="true">|</span> HTML 마크업
+              2일 미니프로젝트 <span aria-hidden="true">|</span> 반응형 웹을
+              자유자재로
             </strong>
             <p class="card__desc">
-              고정형 레이아웃으로 HTML/CSS 기초 완벽하게 잡기
+              비효율적인 고정형 레이아웃은 그만! 넷플릭스 클론코딩을 통한 반응형
+              웹 입문하기
             </p>
             <div class="tag-wrapper">
               <span class="tag card__tag">HTML/CSS</span>
-              <span class="tag card__tag">고정형</span>
+              <span class="tag card__tag">반응형</span>
+              <span class="tag card__tag">넷플릭스</span>
+              <span class="tag card__tag">클론코딩</span>
             </div>
-          </div>
-        </article>
-        <article class="card card-practice">
-          <h3 class="card__title">반응형 레이아웃 웹 만들기</h3>
-          <strong class="card__subtitle">
-            2일 미니프로젝트 <span aria-hidden="true">|</span> 반응형 웹을
-            자유자재로
-          </strong>
-          <p class="card__desc">
-            비효율적인 고정형 레이아웃은 그만! 넷플릭스 클론코딩을 통한 반응형
-            웹 입문하기
-          </p>
-          <div class="tag-wrapper">
-            <span class="tag card__tag">HTML/CSS</span>
-            <span class="tag card__tag">반응형</span>
-            <span class="tag card__tag">넷플릭스</span>
-            <span class="tag card__tag">클론코딩</span>
-          </div>
-        </article>
-        <article class="card card-practice">
-          <h3 class="card__title">SASS를 사용하여 웹 만들기</h3>
-          <strong class="card__subtitle">
-            3일 미니프로젝트 <span aria-hidden="true">|</span> SASS를 통한 CSS
-            관리방법
-          </strong>
-          <p class="card__desc">반응형 레이아웃과 SASS를 동시에 잡아보자!</p>
-          <div class="tag-wrapper">
-            <span class="tag card__tag">SASS</span>
-            <span class="tag card__tag">넷플릭스</span>
-            <span class="tag card__tag">클론코딩</span>
-          </div>
-        </article>
-        <article class="card card-practice">
-          <h3 class="card__title">Tailwind를 사용하여 웹 만들기</h3>
-          <strong class="card__subtitle">
-            1일 미니프로젝트 <span aria-hidden="true">|</span> Tailwind를 통한
-            CSS 관리방법
-          </strong>
-          <p class="card__desc">기존의 웹카페로 Tailwind 완전정복!</p>
-          <div class="tag-wrapper">
-            <span class="tag card__tag">수강가능</span>
-            <span class="tag card__tag">프로그래밍</span>
-          </div>
-        </article>
+          </article>
+          <article class="card card-practice">
+            <h3 class="card__title">SASS를 사용하여 웹 만들기</h3>
+            <strong class="card__subtitle">
+              3일 미니프로젝트 <span aria-hidden="true">|</span> SASS를 통한 CSS
+              관리방법
+            </strong>
+            <p class="card__desc">반응형 레이아웃과 SASS를 동시에 잡아보자!</p>
+            <div class="tag-wrapper">
+              <span class="tag card__tag">SASS</span>
+              <span class="tag card__tag">넷플릭스</span>
+              <span class="tag card__tag">클론코딩</span>
+            </div>
+          </article>
+          <article class="card card-practice">
+            <h3 class="card__title">Tailwind를 사용하여 웹 만들기</h3>
+            <strong class="card__subtitle">
+              1일 미니프로젝트 <span aria-hidden="true">|</span> Tailwind를 통한
+              CSS 관리방법
+            </strong>
+            <p class="card__desc">기존의 웹카페로 Tailwind 완전정복!</p>
+            <div class="tag-wrapper">
+              <span class="tag card__tag">수강가능</span>
+              <span class="tag card__tag">프로그래밍</span>
+            </div>
+          </article>
+        </div>
 
         <div class="button-group">
           <button type="button">좌</button>
