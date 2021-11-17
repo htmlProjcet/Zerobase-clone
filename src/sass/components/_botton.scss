@@ -7,7 +7,6 @@
   background: inherit;
   border: 0;
   padding: rem(8px) rem(16px);
-  border-radius: rem(4px);
 
   &None {
     appearance: none;
@@ -21,32 +20,35 @@
     @include desktop {
       display: none;
     }
-    width: rem(32px);
-    height: rem(32px);
+    width: rem(25px);
+    height: rem(25px);
     overflow: hidden;
     transform: translate(0, 0);
+    margin-right: 10px;
+    position: absolute;
+    right: 0px;
 
-    &burger__top,
-    &burger__middle,
-    &burger__bottom {
-      background: $white;
+    &__top,
+    &__middle,
+    &__bottom {
+      background: $dark-gray;
       position: absolute;
       left: 0;
       width: 100%;
-      height: 20%;
-      border-radius: rem(4px);
     }
 
-    &burger__top {
-      top: 0;
+    &__top {
+      height: 12%;
+      top: 10%;
     }
-    &burger__middle {
-      top: 50%;
-      transform: translateY(-50%);
+    &__middle {
+      height: 12%;
+      top: 45%;
+      transform: translateY(5);
     }
-    &burger__bottom {
-      top: 100%;
-      transform: translateY(-100%);
+    &__bottom {
+      height: 12%;
+      top: 80%;
     }
   }
 }
