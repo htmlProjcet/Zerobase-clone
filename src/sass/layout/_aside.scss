@@ -1,8 +1,8 @@
 @use "./../utils" as *;
 
 .banner {
-  padding-top: rem(48px);
-  padding-bottom: rem(48px);
+  // padding-top: rem(48px);
+  // padding-bottom: rem(48px);
   background-color: pink;
   @include tablet {
     height: rem(404px);
@@ -11,7 +11,16 @@
     height: rem(404px);
   }
   position: relative;
-
+  a {
+    display: block;
+    width: inherit;
+    height: inherit;
+    // box-sizing: content-box;
+    // padding-left: 5vw;
+    // padding-right: 5vw;
+    // @include desktop {
+    // }
+  }
   &-list-status {
     display: block;
     background-color: rgba(0, 0, 0, 0.24);
@@ -68,6 +77,12 @@
     }
   }
   &-container {
+    width: inherit;
+    height: inherit;
+    li {
+      width: inherit;
+      height: inherit;
+    }
     li:nth-child(1) {
       background-color: rgb(29, 67, 50);
       span {
@@ -184,13 +199,13 @@
 
   @include boxSizeFull;
   width: 100vw;
-  padding-left: 10vw;
-  padding-right: 10vw;
+  // padding-left: 10vw;
+  // padding-right: 10vw;
 
   @include tablet {
     @include boxSizeFull;
     width: 100vw;
-    padding-left: 5vw;
-    padding-right: 5vw;
+    // padding-left: 5vw;
+    // padding-right: 5vw;
   }
 }
