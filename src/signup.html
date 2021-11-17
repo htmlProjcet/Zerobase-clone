@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원가입 페이지</title>
+  <link rel="stylesheet" href="./style/index.css" />
+
+</head>
+<body class="body">
+  <header>
+    <h1><img src="assets/logo.svg"></h1>
+  </header>
+  <main>
+    <section>
+      <form>
+        <fieldset>
+          <legend class="sr-only">회원가입 폼</legend>
+          <div class="form-name">
+            <label for="name" class="form-label name">이름</label>
+            <input id="name" type="text" class="form-input"/>
+          </div>
+          <div class="form-email">
+            <label for="email" class="form-label email">이메일</label>
+            <input id="email" type="email" class="form-input"/>
+            <button type="button" class="form-email-button">인증메일 전송</button>
+          </div>
+          
+          <div class="form-phone">
+            <label for="phone" class="form-label phone">휴대전화</label>
+            <input id="phone" type="phone" class="form-input"/>
+          </div>
+          <div class="form-password">
+            <label for="password" class="form-label password">비밀번호</label>
+            <input id="password" type="password" class="form-input"/>
+          </div>
+          <div class="form-password">
+            <label for="confirm-password" class="form-label confirm-password">비밀번호 확인</label>
+            <input id="confirm-password" type="password" class="form-input"/>
+          </div>
+          <!-- 서비스 정책 -->
+          <div>
+            <ul>
+              <li>
+                <input type="checkbox" id="service-agree"/>
+            <label for="service-agree">전체 동의</label>
+              </li>
+              <li>
+                <input type="checkbox" id="service-age"/>
+            <label for="service-age">만 14세 이상입니다. (필수)</label>
+              </li>
+              <li>
+                <input type="checkbox" id="service-use"/>
+            <label for="service-use">서비스 이용약관 동의 (필수)</label>
+              </li>
+              <li>
+                <input type="checkbox" id="service-privacy"/>
+            <label for="service-privacy">개인정보 수집 및 이용 동의 (필수)</label>
+              </li>
+              <li>
+                <input type="checkbox" id="service-sns"/>
+            <label for="service-sns">마케팅 수신 동의 (선택)</label>
+              </li>
+            </ul>
+          </div>
+          <!-- 회원가입 버튼 -->
+          <div>
+            <button type="submit" class="form-button">회원가입</button>
+          </div>
+          <a class="form-back">뒤로가기</a>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
