@@ -14,34 +14,37 @@
 
 <body>
   <header class="header">
-    <h1 class="header__title">
-      <a class="logo" href="#"><img src="./assets/logo.svg" alt="zerobase" /></a>
-    </h1>
-
-    <!-- hamberger button -->
-    <button class="buttonNone button--burger" aria-label="메뉴 열기">
-      <span class="button--burger__top"></span>
-      <span class="button--burger__middle"></span>
-      <span class="button--burger__bottom"></span>
-    </button>
-    <div class="nav-menu">
-      <!-- 데스크탑일 때 아이콘 추가 -->
-      <div class="login">
-        <img class="loginIcon" src="./assets/login.svg" alt="로그인" />
-        <a class="header-members__login" href="./signin.html">로그인</a>
-      </div>
-      <div class="signup">
-        <img class="signupIcon" src="./assets/login.svg" alt="회원가입" />
-        <a class="header-members__signup" href="./signup.html">회원가입</a>
-      </div>
-
+    <div class="header-layout">
+      <h1 class="header__title">
+        <a class="logo" href="#"><img src="./assets/logo.svg" alt="zerobase"></a>
+      </h1>
       <nav class="header-nav">
+        <!-- hamberger button -->
+        <button class="buttonNone button--burger" aria-label="메뉴 열기">
+          <span class="button--burger__top"></span>
+          <span class="button--burger__middle"></span>
+          <span class="button--burger__bottom"></span>
+        </button>
+        <!-- 데스크탑일 때 아이콘 추가 -->
+
         <h2 class="sr-only">메인 메뉴</h2>
         <ul class="header-nav-list">
           <li class="header-nav__item">
+            <div class="member-service">
+              <div class="login">
+                <img class="loginIcon" src="./assets/login.svg" alt="로그인">
+                <a class="header-members__login" href="">로그인</a>
+              </div>
+              <div class="signup">
+                <img class="signupIcon" src="./assets/login.svg" alt="회원가입">
+                <a class="header-members__signup" href="">회원가입</a>
+              </div>
+            </div>
+          </li>
+          <li class="header-nav__item">
             <button type="button" class="button header-nav__button">
               about us
-              <img src="./assets/icon-arrow.svg" alt="화살표" />
+              <img src="./assets/icon-arrow.svg" alt="화살표">
             </button>
             <ul class="sub-menu">
               <li>
@@ -53,9 +56,8 @@
             </ul>
           </li>
           <li class="header-nav__item">
-            <button class="button header-nav__button" type="button">
-              이벤트
-              <img src="./assets/icon-arrow.svg" alt="화살표" />
+            <button class="button header-nav__button" type="button">이벤트
+              <img src="./assets/icon-arrow.svg" alt="화살표">
             </button>
             <ul class="sub-menu">
               <li>
@@ -72,7 +74,7 @@
           <li class="header-nav__item">
             <button class="button header-nav__button" type="button">
               온라인 강의
-              <img src="./assets/icon-arrow.svg" alt="화살표" />
+              <img src="./assets/icon-arrow.svg" alt="화살표">
             </button>
             <ul class="sub-menu">
               <li>
@@ -87,9 +89,8 @@
             </ul>
           </li>
           <li class="header-nav__item">
-            <button class="button header-nav__button" type="button">
-              재테크
-              <img src="./assets/icon-arrow.svg" alt="화살표" />
+            <button class="button header-nav__button" type="button">재테크
+              <img src="./assets/icon-arrow.svg" alt="화살표">
             </button>
             <ul class="sub-menu">
               <li>
@@ -104,9 +105,9 @@
             </ul>
           </li>
           <li class="header-nav__item">
-            <button class="button header-nav__button" type="button">
-              네카라쿠배
-              <img src="./assets/icon-arrow.svg" alt="화살표" />
+            <button class="button header-nav__button" type="button">네카라쿠배
+              <img src="./assets/icon-arrow.svg" alt="화살표">
+
             </button>
             <ul class="sub-menu">
               <li>
