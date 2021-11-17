@@ -13,19 +13,17 @@
   border-radius: rem(10px);
 
   background-color: $white;
-
-  img{
-    border-radius: rem(10px);
-  }
-
+  
   &__title {
     @include font-32px-B;
+    
   }
-
+  
   &__thumb {
+    border-radius: rem(10px);
     width: 100%;
     @include mobile {
-      width: 30%;
+      width: rem(140px);
     }
   }
 
