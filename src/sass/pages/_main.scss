@@ -1,4 +1,4 @@
-@use "./../utils" as *;
+@use './../utils' as *;
 
 .main-nav {
   padding: rem(24px) 0;
@@ -66,6 +66,43 @@
   }
 }
 
+.content {
+  position: relative;
+}
+
+.practice-container {
+  @include flexbox($wrap: no-wrap);
+  overflow: hidden;
+}
+
+.card-practice {
+  flex-basis: 33%;
+  flex-shrink: 0;
+}
+
+.content {
+  padding-top: rem(68px);
+
+  &__title {
+    @include font-24px-B;
+    padding-left: rem(16px);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.button-group {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.course {
+  display: block;
+  background-color: pink;
+}
+
 figcaption {
   margin-top: rem(16px);
   text-align: center;
@@ -80,8 +117,7 @@ figcaption {
 }
 
 .lecturer {
-  display: flex;
-  flex-wrap: wrap;
+  @include flexbox($wrap: wrap);
 }
 
 .card-lecturer {
