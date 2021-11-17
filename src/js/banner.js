@@ -11,7 +11,6 @@ function showSlides() {
   slides[currentSlide].classList.remove('is-active');
   currentSlide = (currentSlide + 1) % slides.length;
   slides[currentSlide].classList.add('is-active');
-
   state.innerHTML = currentSlide + 1;
 }
 
@@ -44,6 +43,7 @@ nextBtn.addEventListener('click', function () {
     currentSlide = (currentSlide + 1) % slides.length;
     slides[currentSlide].classList.add('is-active');
   }
+  state.innerHTML = currentSlide + 1;
 });
 
 prevBtn.addEventListener('click', function () {
@@ -58,4 +58,5 @@ prevBtn.addEventListener('click', function () {
     currentSlide = (currentSlide - 1 + slides.length) % slides.length;
     slides[currentSlide].classList.add('is-active');
   }
+  state.innerHTML = currentSlide + 1;
 });

@@ -7,11 +7,17 @@
 
 .card {
   @include paddingX(16px);
+  @include paddingY(16px);
+
   margin-bottom: 12px;
   border-radius: rem(10px);
 
   background-color: $white;
-  
+
+  img{
+    border-radius: rem(10px);
+  }
+
   &__title {
     @include font-32px-B;
   }
@@ -27,7 +33,7 @@
     @include font-18px-B;
     display: block;
     height: rem(54px);
-    margin-bottom: rem(16px);
+    @include marginY(16px);
     order: -1;
   }
 
@@ -50,7 +56,7 @@
       @include paddingX(16px);
     }
     @include tablet {
-      @include paddingY(16px);
+      padding-top: rem(16px);
     }
     @include desktop {
       @include paddingY(16px);
@@ -60,5 +66,5 @@
 
 .tag-wrapper {
   order: -2;
-  margin-bottom: rem(16px);
+  // margin-bottom: rem(16px);
 }
