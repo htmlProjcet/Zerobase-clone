@@ -1,9 +1,15 @@
-@use './../utils' as *;
+@use "./../utils" as *;
 
 .banner {
   padding-top: rem(48px);
   padding-bottom: rem(48px);
   background-color: pink;
+  @include tablet {
+    height: rem(404px);
+  }
+  @include desktop {
+    height: rem(404px);
+  }
   position: relative;
 
   &-list-status {
@@ -52,12 +58,10 @@
       border-top-left-radius: rem(18px);
     }
     .button-pause {
-      margin-left: rem(-4px);
-      // margin-right: rem(-4px);
+      border-left: 1px solid $black;
+      border-right: 1px solid $black;
     }
     .button-next {
-      margin-left: rem(-5px);
-
       border-bottom-right-radius: rem(18px);
       border-top-right-radius: rem(18px);
     }
@@ -65,11 +69,20 @@
 
   &-slide {
     display: none;
-
     &.is-active {
       display: flex;
+      img {
+        @include desktop {
+          transform: scale(0.8);
+        }
+        @include tablet {
+          transform: scale(0.8);
+        }
+      }
     }
-
+    @include mobile {
+      flex-direction: column;
+    }
     @include desktop {
       flex-direction: row-reverse;
       justify-content: center;
@@ -79,11 +92,17 @@
       justify-content: center;
     }
     img {
-      flex-grow: 1;
-      width: 50%;
       border-radius: 20px;
       @include mobile {
         width: 100%;
+      }
+      @include tablet {
+        max-height: 308px;
+        transition: transform 5s linear;
+      }
+      @include desktop {
+        max-height: 308px;
+        transition: transform 5s linear;
       }
     }
     div {
@@ -102,24 +121,39 @@
       @include font-24px-B;
       width: 100%;
       color: $white;
+      margin-top: rem(6px);
+      margin-bottom: rem(8px);
 
-      @include mobile {
-        margin-top: rem(6px);
-        margin-bottom: rem(8px);
+      @include tablet {
+        margin-top: 16px;
+        margin-bottom: 16px;
+        @include font-32px-B;
+        word-break: keep-all;
+      }
+      @include desktop {
+        margin-top: 16px;
+        margin-bottom: 16px;
+        @include font-32px-B;
+        word-break: keep-all;
       }
     }
     p {
       font-size: rem(12px);
       color: $white;
+      @include tablet {
+        @include font-16px-B;
+        color: $white;
+      }
+      @include desktop {
+        @include font-16px-B;
+        color: $white;
+      }
     }
   }
   &__status {
     @include font-12px-B;
     color: $red;
     text-transform: uppercase;
-  }
-  img {
-    // width: 100%;
   }
 
   @include boxSizeFull;
