@@ -4,6 +4,10 @@
   header {
     text-align: center;
     @include paddingY(48px);
+    a {
+      display: block;
+      @include paddingY(10px);
+    }
   }
 
   section {
@@ -25,14 +29,14 @@
   }
 
   &-info {
-    width: 335px;
-    height: 58.8px;
+    width: rem(335px);
+    height: rem(58.8px);
     margin-bottom: rem(16px);
     display: flex;
     position: relative;
     @include mobile {
       width: 100%;
-      max-width: 335px;
+      max-width: rem(335px);
     }
     input {
       flex-grow: 1;
@@ -64,6 +68,7 @@
     label {
       transition: all 0.2s ease-in-out;
       font-size: rem(14px);
+      font-family: "Spoqa Han Sans Neo";
       top: 50%;
       transform: translateY(-50%);
       color: rgb(160, 160, 160);
@@ -105,7 +110,6 @@
     width: 100%;
     border: none;
     border-radius: rem(10px);
-
     line-height: rem(30px);
   }
 
@@ -116,6 +120,7 @@
 
     a {
       color: $black;
+      padding: rem(8px);
     }
   }
 }
