@@ -56,11 +56,8 @@
     .button-prev {
       border-bottom-left-radius: rem(18px);
       border-top-left-radius: rem(18px);
-      // margin-left: rem(-2px);
     }
     .button-pause {
-      // margin-left: rem(-3px);
-      // margin-right: rem(-4px);
       border-left: 1px solid $black;
       border-right: 1px solid $black;
     }
@@ -69,30 +66,32 @@
       border-top-right-radius: rem(18px);
     }
   }
-  &-is_active {
-    img {
-      @include desktop {
-        transform: scale(0.8);
-      }
-      @include tablet {
-        transform: scale(0.8);
+
+  &-slide {
+    display: none;
+    &.is-active {
+      display: flex;
+      img {
+        @include desktop {
+          transform: scale(0.8);
+        }
+        @include tablet {
+          transform: scale(0.8);
+        }
       }
     }
-  }
-  &-container li {
+    @include mobile {
+      flex-direction: column;
+    }
     @include desktop {
-      display: flex;
       flex-direction: row-reverse;
       justify-content: center;
     }
     @include tablet {
-      display: flex;
       flex-direction: row-reverse;
       justify-content: center;
     }
     img {
-      // flex-grow: 1;
-      // width: 50%;
       border-radius: 20px;
       @include mobile {
         width: 100%;
@@ -104,8 +103,6 @@
       @include desktop {
         max-height: 308px;
         transition: transform 5s linear;
-      }
-      &:hover {
       }
     }
     div {
@@ -157,9 +154,6 @@
     @include font-12px-B;
     color: $red;
     text-transform: uppercase;
-  }
-  img {
-    // width: 100%;
   }
 
   @include boxSizeFull;
