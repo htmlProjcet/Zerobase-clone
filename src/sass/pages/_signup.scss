@@ -5,6 +5,10 @@
     text-align: center;
     @include paddingY(48px);
   }
+  a {
+    display: block;
+    @include paddingY(10px);
+  }
 }
 
 .signup-form {
@@ -14,21 +18,21 @@
   width: rem(335px);
   @include mobile {
     width: 100%;
-    max-width: 335px;
+    max-width: rem(335px);
   }
   &-label {
     position: absolute;
   }
 
   &-info {
-    width: 335px;
-    height: 58.8px;
+    width: rem(335px);
+    height: rem(58.8px);
     margin-bottom: rem(16px);
     display: flex;
     position: relative;
     @include mobile {
       width: 100%;
-      max-width: 335px;
+      max-width: rem(335px);
     }
     input {
       flex-grow: 1;
@@ -130,5 +134,10 @@
     @include font-12px;
 
     color: $black;
+  }
+  &-check {
+    h2 {
+      color: rgb(108, 108, 108);
+    }
   }
 }
