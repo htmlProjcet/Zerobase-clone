@@ -15,10 +15,6 @@ html.is-active {
   padding-top: rem(20px);
   @include font-16px-B;
 
-  &__title {
-    margin-bottom: rem(50px);
-  }
-
   .logo {
     @include flexbox($justify: center);
     text-align: center;
@@ -44,14 +40,18 @@ html.is-active {
     border-radius: rem(5px);
     padding: rem(15px);
     @include marginX(20px);
-    margin-bottom: rem(30px);
+    margin-top: rem(60px);
   }
 
-  &-nav-list.is-active {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow-y: auto;
+  &-nav-list {
+    display: none;
+    &.is-active {
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow-y: auto;
+    }
   }
 
   &-nav__item {
@@ -70,7 +70,7 @@ html.is-active {
 
     img {
       position: absolute;
-      right: rem(25px);
+      right: rem(30px);
       transition: all 200ms ease-in-out;
     }
 
@@ -114,7 +114,13 @@ html.is-active {
     @include paddingX(15px);
     background: $white;
     box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
-    width: 95%;
+    @include mobile {
+      width: 93%;
+    }
+    @include tablet {
+      width: 95.5%;
+    }
+
     transform: translateX(20px);
     border-radius: 10px;
     @include font-14px-B;
@@ -126,6 +132,10 @@ html.is-active {
 
     li:last-child {
       border-bottom: 0;
+    }
+
+    &.is-active {
+      display: block;
     }
   }
 
@@ -179,12 +189,16 @@ html.is-active {
       width: rem(230px);
     }
 
-    .is-active.sub-menu {
-      display: block;
-    }
-
     &-nav-list {
       @include flexbox;
+
+      &.is-active {
+        @include flexbox;
+        height: max-content;
+        width: 100vw;
+        position: static;
+        overflow: hidden;
+      }
     }
 
     .nav-menu {
