@@ -78,6 +78,8 @@
 
 .practice-container {
   @include flexbox($wrap: nowrap);
+  position: relative;
+  overflow-x: hidden;
 }
 
 .card-practice {
@@ -116,7 +118,6 @@
 }
 
 .button-group {
-
   position: absolute;
   top: 0;
   right: rem(8px);

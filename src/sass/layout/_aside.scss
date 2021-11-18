@@ -7,10 +7,13 @@
   }
   @include desktop {
     height: rem(404px);
-    margin-top: rem(114px);
+    margin-top: rem(90px);
   }
   position: relative;
   a {
+    @include mobile {
+      height: 50%;
+    }
     @include paddingX(16px);
     width: inherit;
     @include tablet {

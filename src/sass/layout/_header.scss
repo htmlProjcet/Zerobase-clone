@@ -4,11 +4,6 @@ html.is-active {
   overflow-y: hidden;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
 .header {
   z-index: 10000;
   position: fixed;
@@ -19,21 +14,34 @@ a {
   padding-bottom: rem(20px);
   padding-top: rem(20px);
   @include font-16px-B;
+  
+  a {
+  text-decoration: none;
+  color: inherit;
+  }
 
   .logo {
     @include flexbox($justify: center);
     text-align: center;
   }
+  @include onlyMobile {
+    &-members__login,
+    &-members__signup {
+      display: inline-block;
+      width: 100%;
+    }
 
-  .login,
-  .signup {
-    display: inline;
-  }
+    .login,
+    .signup {
+      width: 50%;
+      text-align: center;
+      img {
+        display: none;
+      }
+    }
 
-  .login,
-  .signup {
-    img {
-      display: none;
+    .login {
+      border-right: 3px solid $gray;
     }
   }
 
@@ -44,38 +52,25 @@ a {
     border: 1px solid $white;
     border-radius: rem(5px);
     @include paddingX(20px);
-    @include paddingY(10px);
-    @include marginX(20px);
+    @include paddingY(15px);
+    @include marginX(10px);
     margin-top: rem(50px);
     margin-bottom: rem(30px);
   }
-  @include mobile {
-    &-nav-list {
-      background: $header-bg;
-      right: -100%;
-      transition: all 350ms ease-in-out;
-      position: absolute;
-      width: 100%;
-      height: 100vh;
-      overflow-y: auto;
-      &.is-active {
-        right: 0;
-        transform: none;
-      }
-    }
-  }
 
-  @include tablet {
+  @include onlyMobile {
     &-nav-list {
+      @include paddingX(16px);
+      padding-bottom: rem(60px);
       background: $header-bg;
-      right: -100%;
+      transform: translateX(100%);
       transition: all 350ms ease-in-out;
       position: absolute;
+      top: rem(60px);
       width: 100%;
       height: 100vh;
       overflow-y: auto;
       &.is-active {
-        right: 0;
         transform: none;
       }
     }
@@ -138,16 +133,10 @@ a {
   .sub-menu {
     display: none;
     @include paddingX(15px);
+    @include marginX(15px);
     background: $white;
     box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
-    @include mobile {
-      width: 93%;
-    }
-    @include tablet {
-      width: 95.5%;
-    }
 
-    transform: translateX(20px);
     border-radius: 10px;
     @include font-14px-B;
 
@@ -179,10 +168,6 @@ a {
       transform: translateY(rem(10px));
     }
 
-    .login {
-      margin-right: rem(20px);
-    }
-
     &-layout {
       @include flexbox($justify: space-between, $wrap: nowrap);
       width: 100vw;
@@ -207,8 +192,11 @@ a {
       }
     }
 
+    .login {
+      margin-right: rem(20px);
+    }
+
     .sub-menu {
-      display: none;
       overflow-y: hidden;
       position: absolute;
       transform: translateX(-40px);
