@@ -1,10 +1,12 @@
-@use './../utils' as *;
+@use './../utils'as *;
 
 .main-nav {
   padding: rem(24px) 0;
+
   @include tablet {
     padding: rem(48px) 0;
   }
+
   @include desktop {
     padding: rem(48px) 0;
   }
@@ -19,6 +21,7 @@
 
 .main__item {
   list-style-type: none;
+
   span {
     width: rem(64px);
     height: rem(64px);
@@ -29,6 +32,7 @@
       width: rem(96px);
       height: rem(96px);
     }
+
     @include desktop {
       width: rem(96px);
       height: rem(96px);
@@ -40,6 +44,7 @@
     height: rem(64px);
     border-radius: 30%;
     transition: transform 0.2s linear;
+
     &:hover {
       transform: scale(1.2);
     }
@@ -48,6 +53,7 @@
       width: rem(96px);
       height: rem(96px);
     }
+
     @include tablet {
       width: rem(96px);
       height: rem(96px);
@@ -66,7 +72,7 @@
   }
 }
 
-.practice{
+.practice {
   overflow: hidden;
 }
 
@@ -88,6 +94,7 @@
   @include desktop {
     flex-basis: 32%;
   }
+
   flex-shrink: 0;
   margin-right: rem(16px);
 
@@ -117,6 +124,7 @@
 
 .course {
   display: block;
+  
   @include marginY(16px);
 
   .carousel-title {
@@ -126,18 +134,98 @@
     border-radius: rem(10px);
     background-color: cornflowerblue;
     color: $white;
-    padding: rem(16px);
+    padding: rem(48px) rem(24px);
     margin-top: rem(16px);
   }
+
+  .carousel-banner1 {
+    background-color: #7eb256;
+  }
+
+  .carousel-banner2 {
+    background-color: #3e474f;
+  }
+
+  .carousel-banner3 {
+    background-color: #e55509;
+  }
+
+  .carousel-banner4 {
+    background-color: #c29d58;
+  }
+
+  @include tablet {
+    @include marginY(16px);
+
+    .carousel-title {
+      @include font-24px-B;
+    }
+
+    .carousel-course {
+      border-radius: rem(10px);
+      color: $white;
+      padding: rem(60px);
+      margin-top: rem(16px);
+    }
+
+    .carousel-banner1 {
+      background: url('../../assets/3.png') right / auto 100% no-repeat;
+    }
+
+    .carousel-banner2 {
+      background: url('../../assets/1.png') right/ auto 100% no-repeat;
+    }
+
+    .carousel-banner3 {
+      background: url('../../assets/2.png') right/ auto 100% no-repeat;
+    }
+
+    .carousel-banner4 {
+      background: url('../../assets/4.png') right/ auto 100% no-repeat;
+    }
+  }
+
+  @include desktop {
+    @include marginY(16px);
+
+    .carousel-title {
+      @include font-24px-B;
+    }
+
+    .carousel-course {
+      border-radius: rem(10px);
+      color: $white;
+      padding: rem(60px);
+      margin-top: rem(16px);
+    }
+
+    .carousel-banner1 {
+      background: #7eb256 url('../../assets/3.png') right / auto 100% no-repeat;
+    }
+
+    .carousel-banner2 {
+      background: #3e474f url('../../assets/1.png') right/ auto 100% no-repeat;
+    }
+
+    .carousel-banner3 {
+      background: #e55509 url('../../assets/2.png') right/ auto 100% no-repeat;
+    }
+
+    .carousel-banner4 {
+      background: #c29d58 url('../../assets/4.png') right/ auto 100% no-repeat;
+    }
+  }
+
   .carousel-status,
   .carousel-desc {
     display: inline;
     margin-right: rem(8px);
     @include font-14px-B;
   }
+
   .carousel-status {
     text-transform: uppercase;
-    color: yellow;
+    color: $dark-yellow;
   }
 }
 
@@ -146,9 +234,11 @@ figcaption {
   text-align: center;
   color: $black;
   @include font-12px-B;
+
   @include desktop {
     @include font-18px-B;
   }
+
   @include tablet {
     @include font-18px-B;
   }
@@ -160,6 +250,7 @@ figcaption {
 
 .card-lecturer {
   @include autoMargin;
+
   @include mobile {
     flex-basis: 100%;
   }
