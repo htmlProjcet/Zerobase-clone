@@ -87,16 +87,7 @@
     }
   }
 }
-.card-practice {
-  @include flexbox($direction: column);
 
-  .tag-wrapper {
-    order: -100;
-  }
-}
 .tag-wrapper {
   order: -2;
-  // position: absolute;
-  // bottom: rem(5px);
-  // margin-bottom: rem(16px);
 }
