@@ -21,24 +21,44 @@
             <legend class="sr-only">회원가입 폼</legend>
             <h2 class="sr-only">인적사항</h2>
             <div class="signup-form-info signup-form-name">
-              <input id="name" type="text" class="signup-form-input" />
+              <input
+                id="name"
+                minlength="100"
+                type="text"
+                class="signup-form-input"
+              />
               <label for="name" class="signup-form-label name">이름</label>
             </div>
             <div class="signup-form-info signup-form-email">
-              <input id="email" type="email" class="signup-form-input" />
+              <input
+                id="email"
+                minlength="100"
+                type="email"
+                class="signup-form-input"
+              />
               <label for="email" class="signup-form-label email">이메일</label>
               <button type="button" class="signup-form-email-button">
                 인증메일 전송
               </button>
             </div>
             <div class="signup-form-info signup-form-phone">
-              <input id="phone" type="phone" class="signup-form-input" />
+              <input
+                id="phone"
+                minlength="100"
+                type="phone"
+                class="signup-form-input"
+              />
               <label for="phone" class="signup-form-label phone"
                 >휴대전화</label
               >
             </div>
             <div class="signup-form-info signup-form-password">
-              <input id="password" type="password" class="signup-form-input" />
+              <input
+                id="password"
+                minlength="100"
+                type="password"
+                class="signup-form-input"
+              />
               <label for="password" class="signup-form-label password"
                 >비밀번호</label
               >
@@ -46,6 +66,7 @@
             <div class="signup-form-info signup-form-password">
               <input
                 id="confirm-password"
+                minlength="100"
                 type="password"
                 class="signup-form-input"
               />
