@@ -1,9 +1,6 @@
 @use "./../utils" as *;
 
 .banner {
-  // padding-top: rem(48px);
-  // padding-bottom: rem(48px);
-  background-color: pink;
   @include tablet {
     height: rem(404px);
   }
@@ -12,14 +9,20 @@
   }
   position: relative;
   a {
-    display: block;
+    @include paddingX(16px);
     width: inherit;
-    height: inherit;
-    // box-sizing: content-box;
-    // padding-left: 5vw;
-    // padding-right: 5vw;
-    // @include desktop {
-    // }
+    @include tablet {
+      display: flex;
+      flex-direction: row-reverse;
+      padding-left: 5vw;
+      padding-right: 5vw;
+    }
+    @include desktop {
+      display: flex;
+      flex-direction: row-reverse;
+      padding-left: 5vw;
+      padding-right: 5vw;
+    }
   }
   &-list-status {
     display: block;
@@ -82,21 +85,21 @@
     li {
       width: inherit;
       height: inherit;
-      padding-left: rem(16px);
-      padding-right: rem(16px);
+      // padding-left: rem(16px);
+      // padding-right: rem(16px);
       padding-bottom: rem(48px);
 
       @include tablet {
         padding-top: rem(48px);
         padding-bottom: rem(48px);
-        padding-left: 5vw;
-        padding-right: 5vw;
+        // padding-left: 5vw;
+        // padding-right: 5vw;
       }
       @include desktop {
         padding-top: rem(48px);
         padding-bottom: rem(48px);
-        padding-left: 5vw;
-        padding-right: 5vw;
+        // padding-left: 5vw;
+        // padding-right: 5vw;
       }
     }
     li:nth-child(1) {
