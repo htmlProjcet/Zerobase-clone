@@ -9,10 +9,13 @@
   @include paddingX(16px);
   @include paddingY(16px);
 
+  @include marginX(1px);
   margin-bottom: 12px;
   border-radius: rem(10px);
 
   background-color: $white;
+
+  position: relative;
 
   img{
     border-radius: rem(10px);
@@ -63,8 +66,16 @@
     }
   }
 }
+.card-practice{
+  @include flexbox($direction: column);
 
+  .tag-wrapper{
+    order:-100;
+  }
+}
 .tag-wrapper {
   order: -2;
+  // position: absolute;
+  // bottom: rem(5px);
   // margin-bottom: rem(16px);
 }
