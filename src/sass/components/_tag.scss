@@ -14,7 +14,7 @@
 
 .html__tag {
   background-color: $orange-red;
-  color: $black;
+  color: $white;
 }
 
 .fixed__tag {
@@ -24,7 +24,7 @@
 
 .rwd__tag {
   background-color: $coral-blue;
-  color: $black;
+  color: $white;
 }
 
 .netflix__tag {
@@ -43,8 +43,8 @@
 }
 
 .take__tag {
-  background: $light-orange;
-  color: $dark-blue;
+  border: 1px solid blue;
+  color: blue;
 }
 
 .prog__tag {
@@ -68,8 +68,8 @@
 }
 
 .coding__tag {
-  background: rgba($color: #00b9b9, $alpha: 1);
-  color: $black;
+  border: 1px solid rgba($color: #008b8b, $alpha: 1);
+  color: #008b8b;
 }
 
 .cooper__tag {
@@ -78,8 +78,8 @@
 }
 
 .algorithm__tag {
-  background: lightblue;
-  color: black;
+  background: rgb(121, 197, 222);
+  color: $black;
 }
 
 .career__tag {
@@ -88,8 +88,8 @@
 }
 
 .interview__tag {
-  background: pink;
-  color: $black;
+  background: rgb(0, 191, 0);
+  color: $white;
 }
 
 .mental__tag {
