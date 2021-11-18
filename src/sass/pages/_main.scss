@@ -1,4 +1,4 @@
-@use "./../utils" as *;
+@use './../utils' as *;
 
 .main-nav {
   padding: rem(24px) 0;
@@ -121,22 +121,83 @@
   position: absolute;
   top: 0;
   right: rem(8px);
+  @include mobile {
+    top: rem(24px);
+  }
 }
 
 .course {
   display: block;
+  position: relative;
 
   @include marginY(16px);
+
+  .carousel-article-status {
+    position: absolute;
+    top: 185px;
+    left: 20px;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.24);
+    color: $white;
+    width: rem(74px);
+    line-height: rem(36px);
+    text-align: center;
+    border-radius: 20px;
+
+    @include tablet {
+      top: 220px;
+    }
+    @include desktop {
+      top: 220px;
+    }
+  }
+  .carousel-article-control {
+    position: absolute;
+    top: 185px;
+    left: 100px;
+    text-align: center;
+    button {
+      width: rem(36px);
+      height: rem(36px);
+      border: none;
+      background-color: rgba(0, 0, 0, 0.24);
+      color: $white;
+      margin: 0;
+    }
+    .button-prev {
+      border-bottom-left-radius: rem(18px);
+      border-top-left-radius: rem(18px);
+    }
+    .button-pause {
+      border-left: 1px solid $black;
+      border-right: 1px solid $black;
+    }
+    .button-next {
+      border-bottom-right-radius: rem(18px);
+      border-top-right-radius: rem(18px);
+    }
+
+    @include tablet {
+      top: 220px;
+    }
+    @include desktop {
+      top: 220px;
+    }
+  }
 
   .carousel-title {
     @include font-18px-B;
   }
   .carousel-course {
+    display: none;
     border-radius: rem(10px);
     background-color: cornflowerblue;
     color: $white;
     padding: rem(48px) rem(24px);
     margin-top: rem(16px);
+    &.is-active {
+      display: block;
+    }
   }
 
   .carousel-banner1 {
@@ -250,17 +311,22 @@ figcaption {
 }
 
 .card-lecturer {
-  @include autoMargin;
-
   @include mobile {
     flex-basis: 100%;
   }
 
   @include tablet {
     flex-basis: 48%;
+    &:nth-child(2n) {
+      margin-right: 2%;
+    }
   }
 
   @include desktop {
     flex-basis: 32%;
+    &:nth-child(3n),
+    &:nth-child(3n + 2) {
+      margin-right: 2%;
+    }
   }
 }
