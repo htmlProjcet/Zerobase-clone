@@ -1,30 +1,35 @@
 @use "./../utils" as *;
 
 .banner {
-  // padding-top: rem(48px);
-  // padding-bottom: rem(48px);
-  background-color: pink;
+  margin-top: rem(64px);
   @include tablet {
     height: rem(404px);
   }
   @include desktop {
     height: rem(404px);
+    margin-top: rem(114px);
   }
   position: relative;
   a {
-    display: block;
+    @include paddingX(16px);
     width: inherit;
-    height: inherit;
-    // box-sizing: content-box;
-    // padding-left: 5vw;
-    // padding-right: 5vw;
-    // @include desktop {
-    // }
+    @include tablet {
+      display: flex;
+      flex-direction: row-reverse;
+      padding-left: 5vw;
+      padding-right: 5vw;
+    }
+    @include desktop {
+      display: flex;
+      flex-direction: row-reverse;
+      padding-left: 5vw;
+      padding-right: 5vw;
+    }
   }
   &-list-status {
     display: block;
     background-color: rgba(0, 0, 0, 0.24);
-    color: rgba(0, 0, 0, 0.24);
+    color: $white;
     width: rem(74px);
     line-height: rem(36px);
     text-align: center;
@@ -46,7 +51,7 @@
     position: absolute;
     bottom: rem(7px);
     left: rem(100px);
-
+    text-align: center;
     @include desktop {
       bottom: rem(24px);
       left: 15vw;
@@ -61,6 +66,7 @@
       height: rem(36px);
       border: none;
       background-color: rgba(0, 0, 0, 0.24);
+      color: $white;
       margin: 0;
     }
     .button-prev {
@@ -82,21 +88,21 @@
     li {
       width: inherit;
       height: inherit;
-      padding-left: rem(16px);
-      padding-right: rem(16px);
+      // padding-left: rem(16px);
+      // padding-right: rem(16px);
       padding-bottom: rem(48px);
 
       @include tablet {
         padding-top: rem(48px);
         padding-bottom: rem(48px);
-        padding-left: 5vw;
-        padding-right: 5vw;
+        // padding-left: 5vw;
+        // padding-right: 5vw;
       }
       @include desktop {
         padding-top: rem(48px);
         padding-bottom: rem(48px);
-        padding-left: 5vw;
-        padding-right: 5vw;
+        // padding-left: 5vw;
+        // padding-right: 5vw;
       }
     }
     li:nth-child(1) {
@@ -126,15 +132,26 @@
   }
   &-slide {
     display: none;
+
     &.is-active {
       display: flex;
       img {
         @include desktop {
-          transform: scale(0.8);
+          animation-name: changeImage;
+          animation-duration: 5s;
         }
         @include tablet {
-          transform: scale(0.8);
+          animation-name: changeImage;
+          animation-duration: 5s;
         }
+      }
+    }
+    @keyframes changeImage {
+      from {
+        transform: scale(1);
+      }
+      to {
+        transform: scale(0.8);
       }
     }
     @include mobile {
@@ -155,11 +172,9 @@
       }
       @include tablet {
         max-height: 308px;
-        transition: transform 5s linear;
       }
       @include desktop {
         max-height: 308px;
-        transition: transform 5s linear;
       }
     }
     div {
