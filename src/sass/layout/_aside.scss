@@ -11,6 +11,9 @@
   }
   position: relative;
   a {
+    @include mobile {
+      height: 50%;
+    }
     @include paddingX(16px);
     width: inherit;
     @include tablet {
