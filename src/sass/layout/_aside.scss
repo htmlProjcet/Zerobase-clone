@@ -31,13 +31,13 @@
     position: absolute;
     bottom: rem(7px);
     border-radius: 20px;
-
+    left: 16px;
     @include desktop {
-      bottom: rem(48px);
-      left: 10vw;
+      bottom: rem(24px);
+      left: 5vw;
     }
     @include tablet {
-      bottom: rem(48px);
+      bottom: rem(24px);
       left: 5vw;
     }
   }
@@ -45,14 +45,14 @@
   &-list-control {
     position: absolute;
     bottom: rem(7px);
-    left: rem(150px);
+    left: rem(100px);
 
     @include desktop {
-      bottom: rem(48px);
-      left: 20vw;
+      bottom: rem(24px);
+      left: 15vw;
     }
     @include tablet {
-      bottom: rem(48px);
+      bottom: rem(24px);
       left: 15vw;
     }
 
@@ -82,6 +82,22 @@
     li {
       width: inherit;
       height: inherit;
+      padding-left: rem(16px);
+      padding-right: rem(16px);
+      padding-bottom: rem(48px);
+
+      @include tablet {
+        padding-top: rem(48px);
+        padding-bottom: rem(48px);
+        padding-left: 5vw;
+        padding-right: 5vw;
+      }
+      @include desktop {
+        padding-top: rem(48px);
+        padding-bottom: rem(48px);
+        padding-left: 5vw;
+        padding-right: 5vw;
+      }
     }
     li:nth-child(1) {
       background-color: rgb(29, 67, 50);
