@@ -4,11 +4,6 @@ html.is-active {
   overflow-y: hidden;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
 .header {
   z-index: 10000;
   position: fixed;
@@ -19,6 +14,11 @@ a {
   padding-bottom: rem(20px);
   padding-top: rem(20px);
   @include font-16px-B;
+  
+  a {
+  text-decoration: none;
+  color: inherit;
+  }
 
   .logo {
     @include flexbox($justify: center);
