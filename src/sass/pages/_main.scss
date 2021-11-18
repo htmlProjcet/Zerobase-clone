@@ -72,7 +72,6 @@
 
 .practice-container {
   @include flexbox($wrap: nowrap);
-  overflow: hidden;
 }
 
 .card-practice {

@@ -6,6 +6,9 @@
 @use './../utils/media-query' as *;
 
 .card {
+
+  transition: transform 1s;
+
   @include tablet {
     @include paddingX(16px);
     @include paddingY(16px);
@@ -47,10 +50,6 @@
   &__desc {
     @include font-14px;
     color: $desc-font;
-    // width: 100%;
-    // overflow: hidden;
-    // text-overflow: ellipsis;
-    // white-space: nowrap;
   }
 }
 
@@ -70,6 +69,10 @@
       padding: rem(32px);
     }
   }
+}
+
+.card:hover{
+  transform: translateY(-10px);
 }
 
 .card-lecturer {
