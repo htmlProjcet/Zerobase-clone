@@ -100,8 +100,39 @@
 
 .course {
   display: block;
-  background-color: pink;
+  @include marginY(16px);
+
+  .carousel-title{
+    @include font-18px-B;
+  }
+  .carousel-course {
+    border-radius: rem(10px);
+    background-color: cornflowerblue;
+    color: $white;
+    padding: rem(16px);
+    margin-top: rem(16px);
+  }
+  .carousel-status, .carousel-desc{
+    display: inline;
+    margin-right: rem(8px);
+    @include font-14px-B;
+  }
+  .carousel-status{
+    text-transform: uppercase;
+    color: yellow;
+
+  }
+  // @include tablet{
+  //   height: rem(45px);
+  // }
+  // @include desktop{
+  //   height: rem(45px);
+
+  // }
 }
+
+
+
 
 figcaption {
   margin-top: rem(16px);

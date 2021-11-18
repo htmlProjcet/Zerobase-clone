@@ -74,7 +74,7 @@ a {
       height: 100vh;
       overflow-y: auto;
       &.is-active {
-        right: 0;
+        transform: translateX(-100%);
         transform: none;
       }
     }
@@ -241,6 +241,8 @@ a {
     &-nav__button {
       img {
         position: static;
+        padding: rem(5px);
+        background: blue;
       }
     }
 
