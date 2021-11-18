@@ -1,8 +1,8 @@
 @use "./../utils" as *;
 
 .banner {
-  padding-top: rem(48px);
-  padding-bottom: rem(48px);
+  // padding-top: rem(48px);
+  // padding-bottom: rem(48px);
   background-color: pink;
   @include tablet {
     height: rem(404px);
@@ -11,7 +11,16 @@
     height: rem(404px);
   }
   position: relative;
-
+  a {
+    display: block;
+    width: inherit;
+    height: inherit;
+    // box-sizing: content-box;
+    // padding-left: 5vw;
+    // padding-right: 5vw;
+    // @include desktop {
+    // }
+  }
   &-list-status {
     display: block;
     background-color: rgba(0, 0, 0, 0.24);
@@ -22,13 +31,13 @@
     position: absolute;
     bottom: rem(7px);
     border-radius: 20px;
-
+    left: 16px;
     @include desktop {
-      bottom: rem(48px);
-      left: 10vw;
+      bottom: rem(24px);
+      left: 5vw;
     }
     @include tablet {
-      bottom: rem(48px);
+      bottom: rem(24px);
       left: 5vw;
     }
   }
@@ -36,14 +45,14 @@
   &-list-control {
     position: absolute;
     bottom: rem(7px);
-    left: rem(150px);
+    left: rem(100px);
 
     @include desktop {
-      bottom: rem(48px);
-      left: 20vw;
+      bottom: rem(24px);
+      left: 15vw;
     }
     @include tablet {
-      bottom: rem(48px);
+      bottom: rem(24px);
       left: 15vw;
     }
 
@@ -68,6 +77,28 @@
     }
   }
   &-container {
+    width: inherit;
+    height: inherit;
+    li {
+      width: inherit;
+      height: inherit;
+      padding-left: rem(16px);
+      padding-right: rem(16px);
+      padding-bottom: rem(48px);
+
+      @include tablet {
+        padding-top: rem(48px);
+        padding-bottom: rem(48px);
+        padding-left: 5vw;
+        padding-right: 5vw;
+      }
+      @include desktop {
+        padding-top: rem(48px);
+        padding-bottom: rem(48px);
+        padding-left: 5vw;
+        padding-right: 5vw;
+      }
+    }
     li:nth-child(1) {
       background-color: rgb(29, 67, 50);
       span {
@@ -184,13 +215,13 @@
 
   @include boxSizeFull;
   width: 100vw;
-  padding-left: 10vw;
-  padding-right: 10vw;
+  // padding-left: 10vw;
+  // padding-right: 10vw;
 
   @include tablet {
     @include boxSizeFull;
     width: 100vw;
-    padding-left: 5vw;
-    padding-right: 5vw;
+    // padding-left: 5vw;
+    // padding-right: 5vw;
   }
 }
