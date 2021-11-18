@@ -24,8 +24,10 @@ body {
   padding-right: 10vw;
 
   @include tablet {
-    @include boxSizeFull;
-    width: 100vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+  @include desktop {
     padding-left: 5vw;
     padding-right: 5vw;
   }
@@ -123,6 +125,13 @@ body {
     text-align: center;
     display: flex;
     flex-direction: column;
+
+    @include tablet{
+      width: 90vw;
+    }
+    @include desktop{
+      width: 90vw;
+    }
   }
 
   @at-root .copyright {
