@@ -6,6 +6,9 @@
 @use './../utils/media-query' as *;
 
 .card {
+
+  transition: transform 1s;
+
   @include tablet {
     @include paddingX(16px);
     @include paddingY(16px);
@@ -69,7 +72,7 @@
 }
 
 .card:hover{
-  transform: translateY(-7px);
+  transform: translateY(-10px);
 }
 
 .card-lecturer {
