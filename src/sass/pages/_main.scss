@@ -66,13 +66,12 @@
   }
 }
 
-.content {
-  position: relative;
+.practice{
+  overflow: hidden;
 }
 
 .practice-container {
   @include flexbox($wrap: nowrap);
-  overflow-x: hidden;
 }
 
 .card-practice {
@@ -98,6 +97,7 @@
 }
 
 .content {
+  position: relative;
   padding-top: rem(68px);
 
   &__title {
