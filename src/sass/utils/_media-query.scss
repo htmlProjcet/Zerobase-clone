@@ -66,6 +66,12 @@ $desktop: 1200px;
   }
 }
 
+@mixin onlyMobile {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
 @mixin desktop {
   @media (min-width: #{$tablet + 1}) {
     @content;
