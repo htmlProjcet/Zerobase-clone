@@ -5,25 +5,22 @@ const html = document.querySelector('html');
 const headerList = document.querySelector('.header-nav-list');
 const headerBtn = document.querySelector('.header-nav__button');
 
-let activeIndex = -1;
+listItems.forEach((item, i) => {
+  item.addEventListener('click', function () {
+    if (item.querySelector('.sub-menu').classList.contains('is-active')) {
+      item.querySelector('.sub-menu').classList.remove('is-active');
+      item.querySelector('.header-nav__button').classList.remove('is-active');
+    } else {
+      let prev = headerList.querySelectorAll('.is-active');
+      for (const pre of prev) {
+        pre.classList.remove('is-active');
+      }
 
-for (let i = 0; i < listItems.length; i++) {
-  listItems[i].addEventListener('click', function () {
-    if (activeIndex > -1) {
-      listItems[activeIndex]
-        .querySelector('.sub-menu')
-        .classList.remove('is-active');
-      listItems[activeIndex]
-        .querySelector('.header-nav__button')
-        .classList.remove('is-active');
+      item.querySelector('.sub-menu').classList.add('is-active');
+      item.querySelector('.header-nav__button').classList.add('is-active');
     }
-    const subMenu = listItems[i].querySelector('.sub-menu');
-    const btn = listItems[i].querySelector('.header-nav__button');
-    subMenu.classList.add('is-active');
-    btn.classList.add('is-active');
-    activeIndex = i;
   });
-}
+});
 
 hamburgerBtn.addEventListener('click', function () {
   if (hambergerActive) {
