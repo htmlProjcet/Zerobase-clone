@@ -1,12 +1,11 @@
-@use './../utils/unit' as *;
-@use './../utils/font' as *;
-@use './../utils/color' as *;
-@use './../utils/mixin' as *;
-@use './../utils/flexbox' as *;
-@use './../utils/media-query' as *;
+@use "./../utils/unit" as *;
+@use "./../utils/font" as *;
+@use "./../utils/color" as *;
+@use "./../utils/mixin" as *;
+@use "./../utils/flexbox" as *;
+@use "./../utils/media-query" as *;
 
 .card {
-
   transition: transform 1s;
 
   @include tablet {
@@ -71,7 +70,7 @@
   }
 }
 
-.card:hover{
+.card:hover {
   transform: translateY(-10px);
 }
 
@@ -98,6 +97,12 @@
   .card__thumb {
     @include mobile {
       width: rem(140px);
+    }
+    @include tablet {
+      height: 50%;
+    }
+    @include desktop {
+      height: 50%;
     }
   }
 
