@@ -1,4 +1,4 @@
-@use './../utils'as *;
+@use './../utils' as *;
 
 .main-nav {
   padding: rem(24px) 0;
@@ -126,6 +126,7 @@
 .course {
   display: block;
   position: relative;
+  
   @include marginY(16px);
 
   .carousel-article-status {
@@ -304,17 +305,22 @@ figcaption {
 }
 
 .card-lecturer {
-  @include autoMargin;
-
   @include mobile {
     flex-basis: 100%;
   }
 
   @include tablet {
     flex-basis: 48%;
+    &:nth-child(2n) {
+      margin-right: 2%;
+    }
   }
 
   @include desktop {
     flex-basis: 32%;
+    &:nth-child(3n),
+    &:nth-child(3n + 2) {
+      margin-right: 2%;
+    }
   }
 }
