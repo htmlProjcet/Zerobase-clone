@@ -6,16 +6,22 @@
 @use './../utils/media-query' as *;
 
 .card {
-  @include paddingX(16px);
-  @include paddingY(16px);
+  @include tablet {
+    @include paddingX(16px);
+    @include paddingY(16px);
+    background-color: $white;
+  }
+  @include desktop {
+    @include paddingX(16px);
+    @include paddingY(16px);
+    background-color: $white;
+  }
 
-  margin-bottom: 12px;
   border-radius: rem(10px);
-
-  background-color: $white;
+  margin-bottom: 12px;
 
   &__title {
-    @include font-18px-B;
+    @include font-24px-B;
   }
 
   &__thumb {
@@ -25,15 +31,32 @@
 
   &__subtitle {
     @include font-18px-B;
-    display: block;
-    height: rem(54px);
     @include marginY(16px);
+    display: block;
+    max-height: rem(54px);
     order: -1;
+
+    @include mobile {
+      margin-top: rem(4px);
+    }
   }
 
   &__desc {
     @include font-14px;
     color: $desc-font;
+  }
+}
+
+.card-practice {
+  background-color: $white;
+  overflow: hidden;
+
+  .card__title {
+    height: rem(36px);
+  }
+
+  .card__desc {
+    margin-bottom: rem(22px);
   }
 }
 

@@ -78,12 +78,17 @@
 .card-practice {
   margin-right: rem(16px);
   @include mobile {
-    width: 90%;
-
-    // flex-basis: 95%;
+    flex-basis: 90%;
+    flex-shrink: 0;
   }
 
-  // flex-basis: 33%;
+  @include tablet {
+    flex-basis: 32%;
+  }
+
+  @include desktop {
+    flex-basis: 32%;
+  }
   flex-shrink: 0;
 }
 
