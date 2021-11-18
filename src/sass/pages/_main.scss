@@ -76,9 +76,8 @@
 }
 
 .card-practice {
-  margin-right: rem(16px);
   @include mobile {
-    flex-basis: 90%;
+    flex-basis: 100%;
     flex-shrink: 0;
   }
 
@@ -90,9 +89,10 @@
     flex-basis: 32%;
   }
   flex-shrink: 0;
+  margin-right: rem(16px);
 
-  &-info {
-    padding: rem(8px);
+  .card__desc {
+    height: rem(56px);
   }
 }
 
@@ -108,9 +108,12 @@
 }
 
 .button-group {
+  @include mobile {
+    top: rem(36px);
+  }
   position: absolute;
   top: 0;
-  right: 0;
+  right: rem(8px);
 }
 
 .course {
@@ -137,13 +140,6 @@
     text-transform: uppercase;
     color: yellow;
   }
-  // @include tablet{
-  //   height: rem(45px);
-  // }
-  // @include desktop{
-  //   height: rem(45px);
-
-  // }
 }
 
 figcaption {
