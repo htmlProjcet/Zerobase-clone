@@ -121,18 +121,21 @@
   position: absolute;
   top: 0;
   right: rem(8px);
+  @include mobile {
+    top: rem(24px);
+  }
 }
 
 .course {
   display: block;
   position: relative;
-  
+
   @include marginY(16px);
 
   .carousel-article-status {
     position: absolute;
     top: 185px;
-    left:20px;
+    left: 20px;
     display: block;
     background-color: rgba(0, 0, 0, 0.24);
     color: $white;
@@ -141,17 +144,17 @@
     text-align: center;
     border-radius: 20px;
 
-    @include tablet{
+    @include tablet {
       top: 220px;
     }
-    @include desktop{
+    @include desktop {
       top: 220px;
     }
   }
   .carousel-article-control {
     position: absolute;
     top: 185px;
-    left:100px;
+    left: 100px;
     text-align: center;
     button {
       width: rem(36px);
@@ -173,25 +176,28 @@
       border-bottom-right-radius: rem(18px);
       border-top-right-radius: rem(18px);
     }
-    
-    @include tablet{
+
+    @include tablet {
       top: 220px;
     }
-    @include desktop{
+    @include desktop {
       top: 220px;
     }
   }
-
 
   .carousel-title {
     @include font-18px-B;
   }
   .carousel-course {
+    display: none;
     border-radius: rem(10px);
     background-color: cornflowerblue;
     color: $white;
     padding: rem(48px) rem(24px);
     margin-top: rem(16px);
+    &.is-active {
+      display: block;
+    }
   }
 
   .carousel-banner1 {
