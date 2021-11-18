@@ -9,13 +9,13 @@
   @include paddingX(16px);
   @include paddingY(16px);
 
-  @include marginX(1px);
   margin-bottom: 12px;
   border-radius: rem(10px);
 
   background-color: $white;
 
   position: relative;
+  transition: transform 0.5s;
 
   img{
     border-radius: rem(10px);
@@ -46,6 +46,10 @@
   }
 }
 
+.card:hover{
+  transform: translateY(-7px);
+}
+
 .card-lecturer {
   @include flexbox($direction: column);
   @include mobile {
@@ -69,9 +73,6 @@
 .card-practice{
   @include flexbox($direction: column);
 
-  .tag-wrapper{
-    order:-100;
-  }
 }
 .tag-wrapper {
   order: -2;
