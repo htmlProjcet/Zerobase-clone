@@ -8,7 +8,7 @@ let bState = bannerStatus.querySelector('.current-page');
 let slides = document.querySelectorAll('.banner-slide');
 
 let currentSlide = 0;
-let slideInterval = setInterval(showSlides, 1000);
+let slideInterval = setInterval(showSlides, 5000);
 let bannerPlaying = true;
 
 function showSlides() {
