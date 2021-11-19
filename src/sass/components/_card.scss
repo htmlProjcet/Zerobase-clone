@@ -22,6 +22,11 @@
   border-radius: rem(10px);
   margin-bottom: 12px;
 
+
+  a{
+    text-decoration: none;
+    color: inherit;
+  }
   &__title {
     @include font-24px-B;
     overflow: hidden;
