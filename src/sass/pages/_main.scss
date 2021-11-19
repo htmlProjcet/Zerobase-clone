@@ -68,7 +68,7 @@
   }
 
   a {
-    text-decoration-line: none;
+    text-decoration: none;
   }
 }
 
@@ -121,12 +121,15 @@
   position: absolute;
   top: 0;
   right: rem(8px);
+  @include mobile {
+    top: rem(24px);
+  }
 }
 
 .course {
   display: block;
   position: relative;
-  
+
   @include marginY(16px);
 
   .carousel-article-status {
@@ -154,6 +157,7 @@
     position: absolute;
     top: rem(245px);
     left:rem(100px);
+
     text-align: center;
     button {
       width: rem(36px);
@@ -175,7 +179,6 @@
       border-bottom-right-radius: rem(18px);
       border-top-right-radius: rem(18px);
     }
-    
     @include tablet{
       top: rem(215px);
       left:rem(140px);
@@ -183,19 +186,23 @@
     @include desktop{
       top: rem(215px);
       left:rem(140px);
+
     }
   }
-
 
   .carousel-title {
     @include font-18px-B;
   }
   .carousel-course {
+    display: none;
     border-radius: rem(10px);
     background-color: cornflowerblue;
     color: $white;
     padding: rem(80px) rem(24px);
     margin-top: rem(16px);
+    &.is-active {
+      display: block;
+    }
   }
 
   .carousel-banner1 {
@@ -238,19 +245,19 @@
     }
 
     .carousel-banner1 {
-      background: url('../../assets/3.png') right / auto 100% no-repeat;
+      background: url("../../assets/3.png") right / auto 100% no-repeat;
     }
 
     .carousel-banner2 {
-      background: url('../../assets/1.png') right/ auto 100% no-repeat;
+      background: url("../../assets/1.png") right/ auto 100% no-repeat;
     }
 
     .carousel-banner3 {
-      background: url('../../assets/2.png') right/ auto 100% no-repeat;
+      background: url("../../assets/2.png") right/ auto 100% no-repeat;
     }
 
     .carousel-banner4 {
-      background: url('../../assets/4.png') right/ auto 100% no-repeat;
+      background: url("../../assets/4.png") right/ auto 100% no-repeat;
     }
   }
 
@@ -269,7 +276,7 @@
     }
 
     .carousel-banner1 {
-      background: #7eb256 url('../../assets/3.png') right / auto 100% no-repeat;
+      background: #7eb256 url("../../assets/3.png") right / auto 100% no-repeat;
     }
 
     .carousel-banner2 {
@@ -282,6 +289,7 @@
 
     .carousel-banner4 {
       background: #c29d58 url('../../assets/4.png') right / auto 100% no-repeat;
+
     }
   }
 

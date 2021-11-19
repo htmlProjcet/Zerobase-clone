@@ -1,62 +1,66 @@
-const prevBtn = document.querySelector(".button-prev");
-const nextBtn = document.querySelector(".button-next");
-const pauseBtn = document.querySelector(".button-pause");
-let state = document.querySelector(".current-page");
-let slides = document.querySelectorAll(".banner-slide");
+const bannerBtnGroup = document.querySelector('.banner-list-control');
+const prevBtn = bannerBtnGroup.querySelector('.button-prev');
+const nextBtn = bannerBtnGroup.querySelector('.button-next');
+const pauseBtn = bannerBtnGroup.querySelector('.button-pause');
+
+const bannerStatus = document.querySelector('.banner-list-status');
+let bState = bannerStatus.querySelector('.current-page');
+let slides = document.querySelectorAll('.banner-slide');
+
 let currentSlide = 0;
-let slideInterval = setInterval(showSlides, 5000);
-let playing = true;
+let slideInterval = setInterval(showSlides, 1000);
+let bannerPlaying = true;
 
 function showSlides() {
-  slides[currentSlide].classList.remove("is-active");
+  slides[currentSlide].classList.remove('is-active');
   currentSlide = (currentSlide + 1) % slides.length;
-  slides[currentSlide].classList.add("is-active");
-  state.innerHTML = currentSlide + 1;
+  slides[currentSlide].classList.add('is-active');
+  bState.innerHTML = currentSlide + 1;
 }
 
 function pauseSlide() {
-  pauseBtn.innerHTML = ">";
-  playing = false;
+  pauseBtn.innerHTML = '>';
+  bannerPlaying = false;
   clearInterval(slideInterval);
 }
 
 function playSlide() {
-  pauseBtn.innerHTML = "||";
-  playing = true;
+  pauseBtn.innerHTML = '||';
+  bannerPlaying = true;
   slideInterval = setInterval(showSlides, 5000);
 }
 
-pauseBtn.addEventListener("click", function () {
-  if (playing) pauseSlide();
+pauseBtn.addEventListener('click', function () {
+  if (bannerPlaying) pauseSlide();
   else playSlide();
 });
 
-nextBtn.addEventListener("click", function () {
-  if (playing) {
+nextBtn.addEventListener('click', function () {
+  if (bannerPlaying) {
     clearInterval(slideInterval);
-    slides[currentSlide].classList.remove("is-active");
+    slides[currentSlide].classList.remove('is-active');
     currentSlide = (currentSlide + 1) % slides.length;
-    slides[currentSlide].classList.add("is-active");
+    slides[currentSlide].classList.add('is-active');
     slideInterval = setInterval(showSlides, 5000);
   } else {
-    slides[currentSlide].classList.remove("is-active");
+    slides[currentSlide].classList.remove('is-active');
     currentSlide = (currentSlide + 1) % slides.length;
-    slides[currentSlide].classList.add("is-active");
+    slides[currentSlide].classList.add('is-active');
   }
-  state.innerHTML = currentSlide + 1;
+  bState.innerHTML = currentSlide + 1;
 });
 
-prevBtn.addEventListener("click", function () {
-  if (playing) {
+prevBtn.addEventListener('click', function () {
+  if (bannerPlaying) {
     clearInterval(slideInterval);
-    slides[currentSlide].classList.remove("is-active");
+    slides[currentSlide].classList.remove('is-active');
     currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    slides[currentSlide].classList.add("is-active");
+    slides[currentSlide].classList.add('is-active');
     slideInterval = setInterval(showSlides, 5000);
   } else {
-    slides[currentSlide].classList.remove("is-active");
+    slides[currentSlide].classList.remove('is-active');
     currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    slides[currentSlide].classList.add("is-active");
+    slides[currentSlide].classList.add('is-active');
   }
-  state.innerHTML = currentSlide + 1;
+  bState.innerHTML = currentSlide + 1;
 });
