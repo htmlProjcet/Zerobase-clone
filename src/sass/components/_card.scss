@@ -1,9 +1,9 @@
-@use "./../utils/unit" as *;
-@use "./../utils/font" as *;
-@use "./../utils/color" as *;
-@use "./../utils/mixin" as *;
-@use "./../utils/flexbox" as *;
-@use "./../utils/media-query" as *;
+@use './../utils/unit' as *;
+@use './../utils/font' as *;
+@use './../utils/color' as *;
+@use './../utils/mixin' as *;
+@use './../utils/flexbox' as *;
+@use './../utils/media-query' as *;
 
 .card {
   transition: transform 1s;
@@ -22,8 +22,7 @@
   border-radius: rem(10px);
   margin-bottom: 12px;
 
-
-  a{
+  a {
     text-decoration: none;
     color: inherit;
   }
@@ -80,11 +79,13 @@
 }
 
 .card-lecturer {
-  @include flexbox($direction: column);
-  @include mobile {
-    flex-direction: row;
-    flex-grow: 1;
-    max-height: rem(150px);
+  a {
+    @include flexbox($direction: column);
+    @include mobile {
+      flex-direction: row;
+      flex-grow: 1;
+      max-height: rem(150px);
+    }
   }
 
   .card__subtitle,
