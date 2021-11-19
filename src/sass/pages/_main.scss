@@ -134,27 +134,30 @@
 
   .carousel-article-status {
     position: absolute;
-    top: 185px;
-    left: 20px;
+    top: rem(245px);
+    left:rem(20px);
     display: block;
     background-color: rgba(0, 0, 0, 0.24);
     color: $white;
     width: rem(74px);
     line-height: rem(36px);
     text-align: center;
-    border-radius: 20px;
+    border-radius: rem(20px);
 
-    @include tablet {
-      top: 220px;
+    @include tablet{
+      top: rem(215px);
+      left:rem(60px);
     }
-    @include desktop {
-      top: 220px;
+    @include desktop{
+      top: rem(215px);
+      left:rem(60px);
     }
   }
   .carousel-article-control {
     position: absolute;
-    top: 185px;
-    left: 100px;
+    top: rem(245px);
+    left:rem(100px);
+
     text-align: center;
     button {
       width: rem(36px);
@@ -169,19 +172,21 @@
       border-top-left-radius: rem(18px);
     }
     .button-pause {
-      border-left: 1px solid $black;
-      border-right: 1px solid $black;
+      border-left: rem(1px) solid $black;
+      border-right: rem(1px) solid $black;
     }
     .button-next {
       border-bottom-right-radius: rem(18px);
       border-top-right-radius: rem(18px);
     }
-
-    @include tablet {
-      top: 220px;
+    @include tablet{
+      top: rem(215px);
+      left:rem(140px);
     }
-    @include desktop {
-      top: 220px;
+    @include desktop{
+      top: rem(215px);
+      left:rem(140px);
+
     }
   }
 
@@ -193,7 +198,7 @@
     border-radius: rem(10px);
     background-color: cornflowerblue;
     color: $white;
-    padding: rem(48px) rem(24px);
+    padding: rem(80px) rem(24px);
     margin-top: rem(16px);
     &.is-active {
       display: block;
@@ -202,6 +207,9 @@
 
   .carousel-banner1 {
     background-color: #7eb256;
+    .carousel-status{
+      color: #f4bc88;
+    }
   }
 
   .carousel-banner2 {
@@ -210,10 +218,16 @@
 
   .carousel-banner3 {
     background-color: #e55509;
+    .carousel-status{
+      color:cornsilk;
+    }
   }
 
   .carousel-banner4 {
     background-color: #c29d58;
+    .carousel-status{
+      color:rgb(5, 90, 90);
+    }
   }
 
   @include tablet {
@@ -266,15 +280,16 @@
     }
 
     .carousel-banner2 {
-      background: #3e474f url("../../assets/1.png") right/ auto 100% no-repeat;
+      background: #3e474f url('../../assets/1.png') right / auto 100% no-repeat;
     }
 
     .carousel-banner3 {
-      background: #e55509 url("../../assets/2.png") right/ auto 100% no-repeat;
+      background: #e55509 url('../../assets/2.png') right / auto 100% no-repeat;
     }
 
     .carousel-banner4 {
-      background: #c29d58 url("../../assets/4.png") right/ auto 100% no-repeat;
+      background: #c29d58 url('../../assets/4.png') right / auto 100% no-repeat;
+
     }
   }
 
