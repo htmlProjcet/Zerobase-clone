@@ -9,13 +9,9 @@
   transition: transform 1s;
 
   @include tablet {
-    @include paddingX(16px);
-    @include paddingY(16px);
     background-color: $white;
   }
   @include desktop {
-    @include paddingX(16px);
-    @include paddingY(16px);
     background-color: $white;
   }
 
@@ -26,6 +22,7 @@
     text-decoration: none;
     color: inherit;
   }
+
   &__title {
     @include font-24px-B;
     overflow: hidden;
@@ -34,8 +31,13 @@
   }
 
   &__thumb {
-    border-radius: rem(10px);
+    border-top-left-radius: rem(10px);
+    border-top-right-radius: rem(10px);
     width: 100%;
+  }
+
+  &-info {
+    padding: rem(16px);
   }
 
   &__subtitle {
@@ -68,6 +70,7 @@
   }
 
   &-info {
+    padding: rem(16px);
     @include mobile {
       padding: rem(32px);
     }
@@ -114,15 +117,10 @@
 
   &-info {
     @include flexbox($direction: column);
+    padding: rem(16px);
     @include mobile {
       @include paddingX(10px);
       width: calc(100vw - 160px);
-    }
-    @include tablet {
-      padding-top: rem(16px);
-    }
-    @include desktop {
-      @include paddingY(16px);
     }
   }
 }
