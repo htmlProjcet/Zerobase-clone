@@ -1,4 +1,4 @@
-@use "./../utils" as *;
+@use './../utils' as *;
 
 html {
   overflow-x: hidden;
@@ -59,15 +59,17 @@ body {
   }
   &-movetop {
     position: absolute;
-    button {
-      border-radius: 50%;
-      border: none;
-      width: 50px;
-      height: 50px;
-      cursor: pointer;
-      @include font-16px-B;
-      // text-transform: uppercase;
-    }
+    text-decoration: none;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid $white;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    @include font-16px-B;
     @include mobile {
       right: 16px;
     }
@@ -87,7 +89,7 @@ body {
   }
 
   .etc a::after {
-    content: "";
+    content: '';
     display: block;
     width: 0;
     height: 0.01rem;
@@ -116,7 +118,7 @@ body {
   }
 
   @at-root .tel li {
-    list-style-type: "-";
+    list-style-type: '-';
     margin-left: rem(6px);
     text-indent: rem(4px);
   }
